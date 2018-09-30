@@ -287,7 +287,8 @@
 		} // end
 	});
 
-	jQuery(window).load(function ($) {
+	// jQuery(window).load(function ($) {
+	jQuery("").on('load',function(){
 		// "use strict";
 
 		// Resetting testimonial parallax height
