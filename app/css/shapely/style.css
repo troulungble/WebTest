@@ -1989,30 +1989,31 @@ input[type="submit"]:focus {
 }
 
 .pagination a, .pagination span {
-    width: 32px;
+    /*width: 32px;*/
     height: 32px;
     padding: 0;
     text-align: center;
-    padding-top: 6px;
-    margin: 0 4px;
-    color: #0e1015;
+    /*padding-top: 6px;*/
+    /*margin: 0 4px;*/
+    /*color: #0e1015;*/
+    color : #c7c4a5;
     font-weight: 400;
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    display: inline-block;
-    border: 1px solid #ddd;
+    /*display: inline-block;*/
+    /*border: 1px solid #ddd;*/
     line-height: 20px;
 }
 
 .pagination span {
-    background: #745cf9;
-    color: #fff;
-    border-color: #745cf9;
+    /*background: #745cf9;*/
+    /*color: #fff;*/
+    /*border-color: #745cf9;*/
 }
 
 .pagination a:hover, .pagination .active a, .pagination .active:hover a {
-    background: #745cf9;
+    background: #c7c4a5;
     color: #fff;
-    border-color: #745cf9;
+    border-color: #c7c4a5;
 }
 
 /*!---------- 11. ICON FEATURES ----------*/
