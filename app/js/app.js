@@ -2,7 +2,10 @@
 
 angular.module('myApp',[
     'ui.router',
-    'ezfb'
+    'ezfb',
+    'ngAnimate',
+    'ngTouch',
+    'angularSuperGallery'
 ]);
 
 angular.module('myApp').config(function(ezfbProvider) {
@@ -10,4 +13,8 @@ angular.module('myApp').config(function(ezfbProvider) {
     ezfbProvider.setInitParams({
         appId: 269753377206775
     });
+});
+
+angular.module('myApp').constant('constantVariable', {
+    PAGE_SIZE : 15
 });

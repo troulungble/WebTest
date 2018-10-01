@@ -1,0 +1,56 @@
+<div class="main-container" ng-controller="NewsDetailsController">
+    <div class="container" >
+        <div class="row">
+            <div class="page-header">
+                <div class="badge badge-status left
+                    {{news.type=='UPDATE'?'badge-warning':''}}
+                    {{news.type=='INFO'?'badge-info':''}}">
+                    {{news.type=='UPDATE'?'更新':''}}
+                    {{news.type=='INFO'?'公告':''}}
+                </div>
+                {{news.title}}
+            </div>
+            <div clas="col-md-12">
+                <div class="well main-well col-md-12">
+                    <div class="well sub-well">
+                        <div class="news-content">
+                            <textarea class="descriptionArea" disabled>{{news.description}}</textarea>
+
+                            <div ng-show="news.eventId">
+                                按此<u><a href="#!/home">更多花絮</a></u>
+                            </div>
+
+                            <div ng-show="news.images.length>0">
+                                <asg-image data-id="gallery" data-options="galleryOptions" data-items="news.images">
+                                    <asg-modal data-visible="false"></asg-modal>
+                                    <asg-thumbnail></asg-thumbnail>
+                                </asg-image>
+                            </div>
+
+                            <div id="map" style="height: 400px;width: 100%" ng-show="news.location.length==2">
+                            </div>
+
+                            <script>
+                                function initMap() {
+                                    var uluru = {lat: 22.449514, lng: 114.165924};
+                                    var map = new google.maps.Map(
+                                        document.getElementById('map'), {zoom: 18, center: uluru});
+                                    var marker = new google.maps.Marker({position: uluru, map: map});
+                                }
+                            </script>
+                            <script
+                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1MEGdAjOR1VH85BA5GX4Sq7P1afoAZJg&callback=initMap">
+                            </script>
+
+                            <div class="right">
+                                <span class="date">
+                                    更新日期 : {{news.date}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
