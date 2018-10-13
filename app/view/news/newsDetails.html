@@ -13,8 +13,16 @@
             <div clas="col-md-12">
                 <div class="well main-well col-md-12">
                     <div class="well sub-well">
-                        <div class="news-content">
-                            <textarea class="descriptionArea" disabled>{{news.description}}</textarea>
+                        <div class="right">
+                                <span class="date">
+                                    更新日期 : {{news.date}}
+                                </span>
+                        </div>
+
+                        <div class="content">
+                            <p ng-repeat="desc in news.description">
+                                {{desc}}
+                            </p>
 
                             <div ng-show="news.eventId">
                                 按此<u><a href="#!/home">更多花絮</a></u>
@@ -27,9 +35,7 @@
                                 </asg-image>
                             </div>
 
-                            <div id="map" style="height: 400px;width: 100%" ng-show="news.location.length==2">
-                            </div>
-
+                            <div id="map" style="height: 400px;width: 100%" ng-show="news.location.length==2"></div>
                             <script>
                                 function initMap() {
                                     var uluru = {lat: 22.449514, lng: 114.165924};
@@ -41,12 +47,6 @@
                             <script
                                     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1MEGdAjOR1VH85BA5GX4Sq7P1afoAZJg&callback=initMap">
                             </script>
-
-                            <div class="right">
-                                <span class="date">
-                                    更新日期 : {{news.date}}
-                                </span>
-                            </div>
                         </div>
                     </div>
                 </div>

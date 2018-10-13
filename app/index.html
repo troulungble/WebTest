@@ -38,60 +38,31 @@
                                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                                         <ul id="menu" class="menu">
                                             <li class="menu-item">
-                                                <a title="Home" href="#!/home">首頁</a></li>
+                                                <a title="首頁" href="#!/home">首頁</a></li>
+                                            <li class="menu-item menu-item-has-children dropdown">
+                                                <a title="關於我們" href="#!/aboutUs/purpose">關於我們</a>
+                                                <span class="dropdown-toggle shapely-dropdown" data-toggle="dropdown"></span>
+                                                <ul role="menu" class="dropdown-menu">
+                                                    <li class="menu-item">
+                                                        <a title="本會宗旨" href="#!/aboutUs/purpose">本會宗旨</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a title="武術源流" href="#!/aboutUs/origin">武術源流</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
                                             <li class="menu-item">
-                                                <a title="Blog" href="#!/aboutUs">關於我們</a></li>
+                                                <a title="最新消息" href="#!/news/list">最新消息</a></li>
                                             <li class="menu-item">
-                                                <a title="Blog" href="#!/news">最新消息</a></li>
-                                            <li class="menu-item">
-                                                <a title="Portfolio" href="#!/highlights">活動花絮</a>
+                                                <a title="活動花絮" href="#!/highlights">活動花絮</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a title="Portfolio" href="#!/clients">客戶專區</a>
+                                                <a title="客戶專區" href="#!/clients">客戶專區</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a title="Portfolio" href="#!/contactUs">聯絡我們</a>
+                                                <a title="聯絡我們" href="#!/contactUs">聯絡我們</a>
                                             </li>
-                                            <!--<li id="menu-item-1643"-->
-                                                <!--class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1643 dropdown">-->
-                                                <!--<a title="Level 1" href="https://colorlibs.com/shapely/level-1/">Level 1 </a><span-->
-                                                    <!--class="dropdown-toggle shapely-dropdown" data-toggle="dropdown"></span>-->
-                                                <!--<ul role="menu" class=" dropdown-menu">-->
-                                                    <!--<li id="menu-item-1644"-->
-                                                        <!--class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1644 dropdown">-->
-                                                        <!--<a title="Level 2"-->
-                                                           <!--href="https://colorlibs.com/shapely/level-1/level-2/">Level 2 </a><span-->
-                                                            <!--class="dropdown-toggle shapely-dropdown" data-toggle="dropdown"></span>-->
-                                                        <!--<ul role="menu" class=" dropdown-menu">-->
-                                                            <!--<li id="menu-item-1645"-->
-                                                                <!--class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1645">-->
-                                                                <!--<a title="Level 3"-->
-                                                                   <!--href="https://colorlibs.com/shapely/level-1/level-2/level-3/">Level-->
-                                                                    <!--3</a></li>-->
-                                                            <!--<li id="menu-item-1699"-->
-                                                                <!--class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1699">-->
-                                                                <!--<a title="Level 3a"-->
-                                                                   <!--href="https://colorlibs.com/shapely/level-1/level-2/level-3a/">Level-->
-                                                                    <!--3a</a></li>-->
-                                                            <!--<li id="menu-item-1700"-->
-                                                                <!--class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1700">-->
-                                                                <!--<a title="Level 3b"-->
-                                                                   <!--href="https://colorlibs.com/shapely/level-1/level-2/level-3b/">Level-->
-                                                                    <!--3b</a></li>-->
-                                                        <!--</ul>-->
-                                                    <!--</li>-->
-                                                    <!--<li id="menu-item-1701"-->
-                                                        <!--class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1701">-->
-                                                        <!--<a title="Level 2a"-->
-                                                           <!--href="https://colorlibs.com/shapely/level-1/level-2a/">Level-->
-                                                            <!--2a</a></li>-->
-                                                    <!--<li id="menu-item-1702"-->
-                                                        <!--class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1702">-->
-                                                        <!--<a title="Level 2b"-->
-                                                           <!--href="https://colorlibs.com/shapely/level-1/level-2b/">Level-->
-                                                            <!--2b</a></li>-->
-                                                <!--</ul>-->
-                                            <!--</li>-->
                                         </ul>
                                     </div>
                                 </div>
@@ -103,7 +74,7 @@
         </header>
     </div>
 
-    <div ui-view></div>
+    <div ui-view style="height: -webkit-fill-available"></div>
 </body>
 <footer>
 </footer>

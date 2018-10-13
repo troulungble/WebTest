@@ -8,9 +8,57 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                     url: '/home',
                     templateUrl: 'view/home.html'
                 })
+            .state('aboutUs',
+                {
+                    url: '/aboutUs',
+                    abstract: true,
+                    template: '<ui-view/>'
+                })
+            .state('aboutUs.purpose',
+                {
+                    url: '/purpose',
+                    templateUrl: 'view/aboutUs/purpose.html',
+                    controller : function($rootScope){
+                        $rootScope.purposeImage1 = "https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb" ;
+                        $rootScope.purposeImage2 = "https://cdn.pixabay.com/photo/2016/10/27/22/53/heart-1776746_960_720.jpg" ;
+                        $rootScope.purposeDescription = [
+                            "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~",
+                            "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~",
+                            "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~",
+                            "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~",
+                            "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~",
+                            "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~",
+                            "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~"
+                        ]
+                    }
+                })
+            .state('aboutUs.origin',
+                {
+                    url: '/origin',
+                    templateUrl: 'view/aboutUs/origin.html',
+                    controller : function($rootScope){
+                        $rootScope.originImage1 = "https://i.pinimg.com/originals/94/dd/57/94dd573e4b4de604ea7f33548da99fd6.jpg" ;
+                        $rootScope.originImage2 = "https://cdn.pixabay.com/photo/2016/10/27/22/53/heart-1776746_960_720.jpg" ;
+                        $rootScope.originDescription = [
+                            "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~",
+                            "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~",
+                            "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~",
+                            "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~",
+                            "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字news.html~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~",
+                            "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~",
+                            "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~"
+                        ]
+                    }
+                })
             .state('news',
                 {
                     url: '/news',
+                    abstract: true,
+                    template: '<ui-view/>'
+                })
+            .state('news.list',
+                {
+                    url: '/list',
                     templateUrl: 'view/news/news.html',
                     controller : function($rootScope){
                         $rootScope.newsTotalNumber = 100 ;
@@ -55,9 +103,9 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                         ]
                     }
                 })
-            .state('newsDetails',
+            .state('news.details',
                 {
-                    url: '/newsDetails/:newsId',
+                    url: '/details/:newsId',
                     templateUrl: 'view/news/newsDetails.html',
                     controller : function($rootScope, $stateParams){
                         console.info($stateParams.newsId);
@@ -65,9 +113,11 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                             id : 1,
                             title : "標題",
                             type: "UPDATE",
-                            description : "說明~說明~說明~說明~說明~說明123~ \n" +
-                                "地址:1591232" +
-                                "時間:16599",
+                            description : [
+                                "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~",
+                                "地址:1591232",
+                                "時間:16599"
+                            ],
                             eventId : 159,
                             images : [
                                 "https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb",
@@ -90,8 +140,16 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                             date : "2018-09-09"
                         }
                     }
+                })
+            .state('contactUs',
+                {
+                    url: '/contactUs',
+                    templateUrl: 'view/contactUs/contactUs.html',
+                    controller : function($rootScope){
+                    }
                 }) ;
 
-        $urlRouterProvider.otherwise('/newsDetails/159');
+
+        $urlRouterProvider.otherwise('/home');
     }
 ]);
