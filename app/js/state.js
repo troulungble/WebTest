@@ -187,10 +187,7 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                                 "https://images.wallpaperscraft.com/image/beach_tropics_sea_sand_palm_trees_sunset_beautiful_84727_1280x720.jpg",
                                 "https://images.wallpaperscraft.com/image/beach_tropics_sea_sand_palm_trees_beautiful_84742_1280x720.jpg"
                             ],
-                            location : [
-                                22.449514,
-                                114.165924
-                            ],
+                            mapLocation : {lat:22.449514, lng:114.165924},
                             date : "2018-09-09"
                         }
                     }
@@ -200,6 +197,38 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                     url: '/contactUs',
                     templateUrl: 'view/contactUs/contactUs.html',
                     controller : function($rootScope){
+                        $rootScope.contactUsDescription = [
+                            {
+                                index:1,
+                                type:"image",
+                                brAmount:0,
+                                content:"https://cdn.pixabay.com/photo/2016/10/27/22/53/heart-1776746_960_720.jpg"
+                            },
+                            {
+                                index:2,
+                                type:"text",
+                                brAmount:0,
+                                content:"聯絡人: 徐志洪 師傅"
+                            },
+                            {
+                                index:3,
+                                type:"text",
+                                brAmount:0,
+                                content:"電話: (852) 9489 3963"
+                            },
+                            {
+                                index:4,
+                                type:"text",
+                                brAmount:0,
+                                content:"Email: fungfotong.hk@gmail.com"
+                            },
+                            {
+                                index:5,
+                                type:"text",
+                                brAmount:0,
+                                content:"地址: 大埔XXX"
+                            }
+                        ]
                     }
                 }) ;
 

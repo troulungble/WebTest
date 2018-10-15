@@ -3,6 +3,16 @@
 angular.module('myApp').controller('NewsDetailsController',
     ["$rootScope","$scope",
     function($rootScope,$scope) {
+        console.info("NewsDetailsController") ;
+
+        if ($rootScope.news.mapLocation) {
+            $scope.newsDetailsUluru = {lat: $rootScope.news.mapLocation.lat, lng: $rootScope.news.mapLocation.lng};
+            var dom_el = document.querySelector('[ng-controller="NewsDetailsController"]');
+            var ng_el = angular.element(dom_el);
+            var ng_el_scope = ng_el.scope();
+            var newsDetailsUluru = ng_el_scope.newsDetailsUluru;
+        }
+
         $rootScope.galleryOptions = {
             "baseUrl": "",
             // "loadingImage": "preload.svg",

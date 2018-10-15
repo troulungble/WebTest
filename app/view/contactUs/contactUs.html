@@ -1,4 +1,4 @@
-<div class="main-container">
+<div class="main-container" ng-controller="ContactUsController">
     <div class="container" >
         <div class="row">
             <div class="page-header">
@@ -29,7 +29,7 @@
                             <div id="map" style="height: 400px;width: 100%"></div>
                             <script>
                                 function initMapContactUs() {
-                                    var uluru = {lat: 22.449514, lng: 114.165924};
+                                    var uluru = $('[ng-controller="ContactUsController"]').scope().uluru;
                                     var map = new google.maps.Map(
                                         document.getElementById('map'), {zoom: 18, center: uluru});
                                     var marker = new google.maps.Marker({position: uluru, map: map});

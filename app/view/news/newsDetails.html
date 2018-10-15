@@ -35,17 +35,17 @@
                                 </asg-image>
                             </div>
 
-                            <div id="map" style="height: 400px;width: 100%" ng-show="news.location.length==2"></div>
+                            <div id="map" style="height: 400px;width: 100%" ng-show="news.mapLocation!=null"></div>
                             <script>
-                                function initMap() {
-                                    var uluru = {lat: 22.449514, lng: 114.165924};
+                                function initMapNewsDetails() {
+                                    var newsDetailsUluru = $('[ng-controller="NewsDetailsController"]').scope().newsDetailsUluru;
                                     var map = new google.maps.Map(
-                                        document.getElementById('map'), {zoom: 18, center: uluru});
-                                    var marker = new google.maps.Marker({position: uluru, map: map});
+                                        document.getElementById('map'), {zoom: 18, center: newsDetailsUluru});
+                                    var marker = new google.maps.Marker({position: newsDetailsUluru, map: map});
                                 }
                             </script>
                             <script
-                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1MEGdAjOR1VH85BA5GX4Sq7P1afoAZJg&callback=initMap">
+                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1MEGdAjOR1VH85BA5GX4Sq7P1afoAZJg&callback=initMapNewsDetails">
                             </script>
                         </div>
                     </div>
