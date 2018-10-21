@@ -1185,7 +1185,7 @@ footer {
 
 .btn, .button {
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    border: 2px solid #745cf9;
+    /*border: 2px solid #745cf9;*/
     padding: 0 26px;
     min-width: 150px;
     line-height: 36px;
@@ -1194,7 +1194,7 @@ footer {
     text-transform: uppercase;
     letter-spacing: 1px;
     border-radius: 0;
-    color: #745cf9;
+    /*color: #745cf9;*/
     text-align: center;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
@@ -1208,7 +1208,7 @@ footer {
 }
 
 .btn:hover, .button:hover {
-    background: #745cf9;
+    /*background: #745cf9;*/
     color: #fff;
 }
 
@@ -1226,7 +1226,7 @@ footer {
 }
 
 .btn-filled, .button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
-    background: #745cf9;
+    /*background: #745cf9;*/
     color: #fff;
 }
 
@@ -1252,8 +1252,8 @@ footer {
 }
 
 .image-bg .btn.btn-filled:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover {
-    background: #5d47d7;
-    border-color: #5d47d7;
+    /*background: #5d47d7;*/
+    /*border-color: #5d47d7;*/
     color: #fff;
 }
 

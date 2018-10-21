@@ -13,9 +13,8 @@ angular.module('myApp').controller('NewsDetailsController',
             var newsDetailsUluru = ng_el_scope.newsDetailsUluru;
         }
 
-        $rootScope.galleryOptions = {
+        $scope.newsGalleryOptions = {
             "baseUrl": "",
-            // "loadingImage": "preload.svg",
             "preloadNext": true,
             "preloadDelay": 420,
             "theme": "whitegold",
@@ -51,10 +50,14 @@ angular.module('myApp').controller('NewsDetailsController',
             },
             "image": {
                 "click": {
-                    "modal": true
+                    "modal": false
                 },
                 "transition": "rotateLR"
-            }
+            },
+            "autoplay": {
+                enabled: true, // slideshow play enabled/disabled
+                delay: 5000 // autoplay delay in millisecond
+            },
         };
     }
     ]

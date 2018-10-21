@@ -5,13 +5,13 @@
                 本會宗旨
             </div>
             <div clas="col-md-12">
-                <div class="well main-well col-md-12" style="right:5px;">
+                <div class="well main-well col-md-12 float-left">
                     <div class="well sub-well float-left">
                         <div class="content">
-                            <img class="banner" src="{{purposeBanner}}" />
+                            <img class="banner" src="{{purposeBanner}}" ng-show="purposeBanner"/>
                             <p ng-repeat="descObject in purposeDescription | orderBy:'index'">
                                 <br ng-repeat="n in [] | range:descObject.brAmount" />
-                                <img ng-if="descObject.type == 'image'" class="float-right" style="margin:10px"
+                                <img ng-if="descObject.type == 'image'" class="float-right image-w200" style="margin:10px"
                                      src="{{descObject.content}}">
 
                                 <span ng-if="descObject.type =='text'">

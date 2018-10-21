@@ -5,7 +5,8 @@ angular.module('myApp',[
     'ezfb',
     'ngAnimate',
     'ngTouch',
-    'angularSuperGallery'
+    'angularSuperGallery',
+    'ngYoutubeEmbed'
 ]);
 
 angular.module('myApp').config(function(ezfbProvider) {

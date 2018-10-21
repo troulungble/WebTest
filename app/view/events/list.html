@@ -1,0 +1,34 @@
+<div class="main-container" ng-controller="EventsController">
+    <div class="container" >
+        <div class="row">
+            <div class="page-header">
+                活動花絮
+            </div>
+            <div clas="col-md-12">
+                <div class="well main-well col-md-12">
+                    <div class="well sub-well col-md-12">
+                        <div class="content">
+                            <img class="banner" src="{{eventsBanner}}" ng-show="highlightBanner"/>
+                            <div class="col-md-12">
+                                <div class="well col-md-3 highlight-cell" ng-repeat="event in eventsList | orderBy:'-id'">
+                                    <a title="{{event.name}}" href="#!/events/details/{{event.id}}">
+                                        <img class="highlight-image" src="{{event.imageUrl}}">
+                                    </a>
+                                    <div>
+                                        {{event.name}}
+                                    </div>
+                                    <div class="date-2" style="margin-bottom: 0px">
+                                        {{event.date}}
+                                    </div>
+                                </div>
+                                <div class="col-md-12 center">
+                                    <button type="buttom" class="btn btn-warning" ng-click="loadMore()">載入更多</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

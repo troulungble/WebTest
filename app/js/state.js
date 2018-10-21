@@ -19,7 +19,7 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                     url: '/purpose',
                     templateUrl: 'view/aboutUs/purpose.html',
                     controller : function($rootScope){
-                        $rootScope.purposeBanner = "https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb" ;
+                        $rootScope.purposeBanner = null ;
                         $rootScope.purposeDescription = [
                             {
                                 index:1,
@@ -64,7 +64,7 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                     url: '/origin',
                     templateUrl: 'view/aboutUs/origin.html',
                     controller : function($rootScope){
-                        $rootScope.originBanner = "https://i.pinimg.com/originals/94/dd/57/94dd573e4b4de604ea7f33548da99fd6.jpg" ;
+                        $rootScope.originBanner = null ;
                         $rootScope.originDescription = [
                             {
                                 index:1,
@@ -89,7 +89,7 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                                 index:3,
                                 type:"image",
                                 brAmount:0,
-                                content:"https://cdn.pixabay.com/photo/2016/10/27/22/53/heart-1776746_960_720.jpg"
+                                content:"https://i.pinimg.com/originals/94/dd/57/94dd573e4b4de604ea7f33548da99fd6.jpg"
                             },
                             {
                                 index:4,
@@ -113,7 +113,7 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
             .state('news.list',
                 {
                     url: '/list',
-                    templateUrl: 'view/news/news.html',
+                    templateUrl: 'view/news/list.html',
                     controller : function($rootScope){
                         $rootScope.newsTotalNumber = 100 ;
                         $rootScope.newsCurrentPage = 1 ;
@@ -159,10 +159,10 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                 })
             .state('news.details',
                 {
-                    url: '/details/:newsId',
-                    templateUrl: 'view/news/newsDetails.html',
+                    url: '/details/:id',
+                    templateUrl: 'view/news/details.html',
                     controller : function($rootScope, $stateParams){
-                        console.info($stateParams.newsId);
+                        console.info($stateParams.id);
                         $rootScope.news = {
                             id : 1,
                             title : "標題",
@@ -230,7 +230,83 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                             }
                         ]
                     }
-                }) ;
+                })
+            .state('events',
+                {
+                    url: '/events',
+                    abstract: true,
+                    template: '<ui-view/>'
+                })
+            .state('events.list',
+                {
+                    url: '/list',
+                    templateUrl: 'view/events/list.html',
+                    controller : function($rootScope){
+                        $rootScope.eventsBanner = null ;
+                        $rootScope.eventsList = [
+                            {
+                                id : 99,
+                                imageUrl : "https://cdn.pixabay.com/photo/2016/10/27/22/53/heart-1776746_960_720.jpg",
+                                date : "2018-10-11",
+                                name : "99"
+                            },
+                            {
+                                id : 98,
+                                imageUrl : "https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=2",
+                                date : "2018-10-12",
+                                name : "98"
+                            },
+                            {
+                                id : 97,
+                                imageUrl : "https://images.pexels.com/photos/65644/poppy-plant-nature-macro-65644.jpeg?auto=compress&cs=tinysrgb&dpr=2",
+                                date : "2018-10-27",
+                                name : "97"
+                            },
+                            {
+                                id : 96,
+                                imageUrl : "https://images.wallpaperscraft.com/image/beach_tropics_sea_sand_palm_trees_sunset_beautiful_84727_1280x720.jpg",
+                                date : "2018-10-14",
+                                name : "96"
+                            }
+                        ]
+                        $rootScope.pagingIndex = 1 ;
+                    }
+                })
+            .state('events.details',
+                {
+                    url: '/details/:id',
+                    templateUrl: 'view/events/details.html',
+                    controller : function($rootScope, $stateParams){
+                        $rootScope.event = {
+                            name : "出獅",
+                            description : "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~\n" +
+                                "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~\n"+
+                                "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~\n"+
+                                "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~\n"+
+                                "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~\n",
+                            date : "2018-10-14",
+                            images : [
+                                "https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb",
+                                "https://cdn.pixabay.com/photo/2016/10/27/22/53/heart-1776746_960_720.jpg",
+                                "https://i.pinimg.com/originals/94/dd/57/94dd573e4b4de604ea7f33548da99fd6.jpg",
+                                "https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=2",
+                                "https://images.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg?auto=compress&cs=tinysrgb&dpr=2",
+                                "https://images.pexels.com/photos/57434/macro-nature-reflection-beautiful-57434.jpeg?auto=compress&cs=tinysrgb&dpr=2",
+                                "https://images.pexels.com/photos/65644/poppy-plant-nature-macro-65644.jpeg?auto=compress&cs=tinysrgb&dpr=2",
+                                "https://wallpaperbrowse.com/media/images/soap-bubble-1958650_960_720.jpg",
+                                "https://wallpaperbrowse.com/media/images/cat-1285634_960_720.png",
+                                "https://images.wallpaperscraft.com/image/beach_tropics_sea_sand_palm_trees_sunset_84729_1280x720.jpg",
+                                "https://images.wallpaperscraft.com/image/beach_tropics_sea_sand_palm_trees_sunset_beautiful_84727_1280x720.jpg",
+                                "https://images.wallpaperscraft.com/image/beach_tropics_sea_sand_palm_trees_beautiful_84742_1280x720.jpg"
+                            ],
+                            youtubes : [
+                                'https://www.youtube.com/watch?v=tERw7WtWaas',
+                                'https://www.youtube.com/watch?v=qqngLsy_Kh4',
+                                'https://www.youtube.com/watch?v=l6Vf1Ct1K1A'
+                            ]
+                        }
+                    }
+                })
 
 
         $urlRouterProvider.otherwise('/home');
