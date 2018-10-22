@@ -22,18 +22,18 @@
                     <div class="well sub-well">
                         <div class="content">
                             <div ng-show="home.images.length>0" class="homeGalleryDiv">
-                                <asg-image data-id="gallery" data-options="homeGalleryOptions" data-items="home.images">
+                                <asg-image data-id="homeGallery" data-options="homeGalleryOptions" data-items="home.images">
                                     <asg-modal data-visible="false" style="margin: 20px"></asg-modal>
-                                    <asg-thumbnail class="news-asg-thumbnail"></asg-thumbnail>
                                 </asg-image>
                             </div>
                         </div>
-                        <div class="homeTable">
+                        <div class="homeTable" style="">
                             <table>
                                 <tr>
-                                    <td style="padding-right: 20px;width: 65%;">
+                                    <td style="padding-right: 20px;width: 65%;height:220px">
                                         <div class="header">
                                             最新消息
+                                            <a class="header-more float-right" title="最新消息" href="#!/news/list">更多 >></a>
                                         </div>
                                         <div id="newsContent">
                                         </div>
@@ -48,9 +48,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="padding-top:10px">
+                                    <td style="padding-top:10px;padding-right: 20px; width: 65%;">
                                         <div class="header">
                                             最新活動花絮
+                                            <a class="header-more float-right" title="活動花絮" href="#!/events/list">更多 >></a>
                                         </div>
                                         <div>
                                             <div class="well col-md-3 home-event-cell" ng-repeat="event in home.events | orderBy:'-id'">

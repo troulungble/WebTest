@@ -1,9 +1,10 @@
 <div class="main-container" ng-controller="ContactUsController">
     <div class="container" >
         <div class="row">
-            <div class="page-header">
+            <div class="page-header" ng-show="!contactUsBanner">
                 聯絡我們
             </div>
+            <img class="banner" src="{{contactUsBanner}}" ng-show="contactUsBanner"/>
             <div clas="col-md-12">
                 <div class="well main-well col-md-8" style="right:5px;">
                     <div class="well sub-well">

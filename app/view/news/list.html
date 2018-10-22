@@ -1,9 +1,10 @@
 <div class="main-container" ng-controller="NewsController">
     <div class="container" >
         <div class="row">
-            <div class="page-header">
+            <div class="page-header" ng-show="!newsBanner">
                 最新消息
             </div>
+            <img class="banner" src="{{newsBanner}}" ng-show="newsBanner"/>
             <div clas="col-md-12">
                 <div class="well main-well col-md-8" style="right:5px;">
                     <div class="well sub-well">

@@ -2736,7 +2736,8 @@ iframe {
 }
 
 .content table tbody > tr:nth-child(odd) > td {
-    background: #f9f9f9;
+    /*background: #f9f9f9;*/
+    background: rgba(0,0,0,0) !important;
 }
 
 .content ul.post-meta {

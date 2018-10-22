@@ -22,11 +22,11 @@
                                             {{event.description}}
                                         </p>
                                     </td>
-                                    <td rowspan="2" style="width: 30%;">
+                                    <td rowspan="2" style="width: 30%;" ng-show="event.youtubes.length>0">
                                         <div class="header">
                                             影片
                                         </div>
-                                        <div ng-show="event.youtubes.length>0" class="video-vertical-card">
+                                        <div class="video-vertical-card">
                                             <div ng-repeat="url in event.youtubes">
                                                 <ng-youtube-embed
                                                         video="url"
@@ -39,13 +39,13 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr ng-show="event.images.length>0">
                                     <td>
                                         <div class="header">
                                             相冊
                                         </div>
-                                        <div ng-show="event.images.length>0">
-                                            <asg-image data-id="gallery" data-options="eventsGalleryOptions" data-items="event.images">
+                                        <div>
+                                            <asg-image data-id="eventDetailsGallery" data-options="eventsGalleryOptions" data-items="event.images">
                                                 <asg-modal data-visible="false"></asg-modal>
                                                 <asg-thumbnail class="event-asg-thumbnail"></asg-thumbnail>
                                             </asg-image>
@@ -53,33 +53,6 @@
                                     </td>
                                 </tr>
                             </table>
-
-
-
-                            <!--<div ng-show="event.youtubes.length>0">-->
-                                <!--<div ng-repeat="url in event.youtubes">-->
-                                    <!--<ng-youtube-embed-->
-                                            <!--video="url"-->
-                                            <!--autoplay="false"-->
-                                            <!--color="white"-->
-                                            <!--disablekb="true"-->
-                                            <!--end="20">-->
-                                    <!--</ng-youtube-embed>-->
-                                <!--</div>-->
-                            <!--</div>-->
-
-                            <!--<div id="map" style="height: 400px;width: 100%" ng-show="news.mapLocation!=null"></div>-->
-                            <!--<script>-->
-                                <!--function initMapNewsDetails() {-->
-                                    <!--var newsDetailsUluru = $('[ng-controller="NewsDetailsController"]').scope().newsDetailsUluru;-->
-                                    <!--var map = new google.maps.Map(-->
-                                        <!--document.getElementById('map'), {zoom: 18, center: newsDetailsUluru});-->
-                                    <!--var marker = new google.maps.Marker({position: newsDetailsUluru, map: map});-->
-                                <!--}-->
-                            <!--</script>-->
-                            <!--<script-->
-                                    <!--src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1MEGdAjOR1VH85BA5GX4Sq7P1afoAZJg&callback=initMapNewsDetails">-->
-                            <!--</script>-->
                         </div>
                     </div>
                 </div>

@@ -7,8 +7,8 @@ angular.module('myApp').controller('NewsController',
             var code = "" ;
             angular.forEach(newPageNews, function (obj, key) {
                 code += "<div class='news'>" ;
-                if (obj.type==='UPDATE'){
-                    code += "<div class='badge badge-status left badge-warning'>更新" ;
+                if (obj.type==='EVENT'){
+                    code += "<div class='badge badge-status left badge-warning'>活動" ;
                 }else if (obj.type==='INFO') {
                     code += "<div class='badge badge-status left badge-info'>公告" ;
                 }
@@ -21,20 +21,6 @@ angular.module('myApp').controller('NewsController',
                 }
                 code += "</div>" ;
                 code += "</div>" ;
-
-                // code += "<div class='news col-md-12'>" ;
-                // if (obj.type==='UPDATE'){
-                //     code += "<div class='badge badge-status left badge-warning float-left' style='margin-right: 10px''>更新" ;
-                // }else if (obj.type==='INFO') {
-                //     code += "<div class='badge badge-status left badge-info float-left' style='margin-right: 10px'>公告" ;
-                // }
-                // code += "</div>" ;
-                // if (obj.news){
-                //     code += "<span class='badge badge-status badge-danger' style='margin-left: 10px'>NEW!</span>" ;
-                // }
-                // code += "<div class='date'>" + obj.date + "</div>" ;
-                // code += "<a class='col-md-6 one-line-text' href='#!/news/details/" + obj.id + "'>" + obj.title + "</a>" ;
-                // code += "</div>" ;
             });
             angular.element(document.getElementById("newsContent")).html(code);
         }
@@ -68,98 +54,14 @@ angular.module('myApp').controller('NewsController',
                 },
                 {
                     id : 2,
-                    type:'UPDATE',
+                    type:'EVENT',
                     title:'大埔出獅' + num,
                     date : '2018-09-22',
                     news:false
                 },
                 {
                     id : 2,
-                    type:'UPDATE',
-                    title:'大埔出獅' + num,
-                    date : '2018-09-22',
-                    news:false
-                },
-                {
-                    id : 2,
-                    type:'UPDATE',
-                    title:'大埔出獅' + num,
-                    date : '2018-09-22',
-                    news:false
-                },
-                {
-                    id : 2,
-                    type:'UPDATE',
-                    title:'大埔出獅' + num,
-                    date : '2018-09-22',
-                    news:false
-                },
-                {
-                    id : 2,
-                    type:'UPDATE',
-                    title:'大埔出獅' + num,
-                    date : '2018-09-22',
-                    news:false
-                },
-                {
-                    id : 2,
-                    type:'UPDATE',
-                    title:'大埔出獅' + num,
-                    date : '2018-09-22',
-                    news:false
-                },
-                {
-                    id : 2,
-                    type:'UPDATE',
-                    title:'大埔出獅' + num,
-                    date : '2018-09-22',
-                    news:false
-                },
-                {
-                    id : 2,
-                    type:'UPDATE',
-                    title:'大埔出獅' + num,
-                    date : '2018-09-22',
-                    news:false
-                },
-                {
-                    id : 2,
-                    type:'UPDATE',
-                    title:'大埔出獅' + num,
-                    date : '2018-09-22',
-                    news:false
-                },
-                {
-                    id : 2,
-                    type:'UPDATE',
-                    title:'大埔出獅' + num,
-                    date : '2018-09-22',
-                    news:false
-                },
-                {
-                    id : 2,
-                    type:'UPDATE',
-                    title:'大埔出獅' + num,
-                    date : '2018-09-22',
-                    news:false
-                },
-                {
-                    id : 2,
-                    type:'UPDATE',
-                    title:'大埔出獅' + num,
-                    date : '2018-09-22',
-                    news:false
-                },
-                {
-                    id : 2,
-                    type:'UPDATE',
-                    title:'大埔出獅' + num,
-                    date : '2018-09-22',
-                    news:false
-                },
-                {
-                    id : 2,
-                    type:'UPDATE',
+                    type:'EVENT',
                     title:'大埔出獅' + num,
                     date : '2018-09-22',
                     news:false

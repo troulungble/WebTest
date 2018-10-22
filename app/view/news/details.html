@@ -5,7 +5,7 @@
                 <div class="badge badge-status left
                     {{news.type=='UPDATE'?'badge-warning':''}}
                     {{news.type=='INFO'?'badge-info':''}}">
-                    {{news.type=='UPDATE'?'更新':''}}
+                    {{news.type=='UPDATE'?'活動':''}}
                     {{news.type=='INFO'?'公告':''}}
                 </div>
                 {{news.title}}
@@ -30,7 +30,7 @@
                             </div>
 
                             <div ng-show="news.images.length>0">
-                                <asg-image data-id="gallery" data-options="newsGalleryOptions" data-items="news.images">
+                                <asg-image data-id="newsDetailsGallery" data-options="newsGalleryOptions" data-items="news.images">
                                     <asg-modal data-visible="false"></asg-modal>
                                     <asg-thumbnail class="news-asg-thumbnail"></asg-thumbnail>
                                 </asg-image>

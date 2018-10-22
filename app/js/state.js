@@ -94,7 +94,7 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                     url: '/purpose',
                     templateUrl: 'view/aboutUs/purpose.html',
                     controller : function($rootScope){
-                        $rootScope.purposeBanner = null ;
+                        $rootScope.purposeBanner = '' ;
                         $rootScope.purposeDescription = [
                             {
                                 index:1,
@@ -139,7 +139,7 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                     url: '/origin',
                     templateUrl: 'view/aboutUs/origin.html',
                     controller : function($rootScope){
-                        $rootScope.originBanner = null ;
+                        $rootScope.originBanner =  '' ;
                         $rootScope.originDescription = [
                             {
                                 index:1,
@@ -190,13 +190,14 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                     url: '/list',
                     templateUrl: 'view/news/list.html',
                     controller : function($rootScope){
+                        $rootScope.newsBanner = '' ;
                         $rootScope.newsTotalNumber = 100 ;
                         $rootScope.newsCurrentPage = 1 ;
 
                         $rootScope.newsList = [
                             {
                                 id : 1,
-                                type:'UPDATE',
+                                type:'EVENT',
                                 title:'大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大',
                                 date : '2018-09-22',
                                 news:true
@@ -223,7 +224,6 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                     url: '/details/:id',
                     templateUrl: 'view/news/details.html',
                     controller : function($rootScope, $stateParams){
-                        console.info($stateParams.id);
                         $rootScope.news = {
                             id : 1,
                             title : "標題",
@@ -264,7 +264,7 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                     url: '/list',
                     templateUrl: 'view/events/list.html',
                     controller : function($rootScope){
-                        $rootScope.eventsBanner = null ;
+                        $rootScope.eventsBanner = '' ;
                         $rootScope.eventsList = [
                             {
                                 id : 99,
@@ -313,13 +313,7 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                                 "https://i.pinimg.com/originals/94/dd/57/94dd573e4b4de604ea7f33548da99fd6.jpg",
                                 "https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=2",
                                 "https://images.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg?auto=compress&cs=tinysrgb&dpr=2",
-                                "https://images.pexels.com/photos/57434/macro-nature-reflection-beautiful-57434.jpeg?auto=compress&cs=tinysrgb&dpr=2",
-                                "https://images.pexels.com/photos/65644/poppy-plant-nature-macro-65644.jpeg?auto=compress&cs=tinysrgb&dpr=2",
-                                "https://wallpaperbrowse.com/media/images/soap-bubble-1958650_960_720.jpg",
-                                "https://wallpaperbrowse.com/media/images/cat-1285634_960_720.png",
-                                "https://images.wallpaperscraft.com/image/beach_tropics_sea_sand_palm_trees_sunset_84729_1280x720.jpg",
-                                "https://images.wallpaperscraft.com/image/beach_tropics_sea_sand_palm_trees_sunset_beautiful_84727_1280x720.jpg",
-                                "https://images.wallpaperscraft.com/image/beach_tropics_sea_sand_palm_trees_beautiful_84742_1280x720.jpg"
+                                "https://images.pexels.com/photos/57434/macro-nature-reflection-beautiful-57434.jpeg?auto=compress&cs=tinysrgb&dpr=2"
                             ],
                             youtubes : [
                                 'https://www.youtube.com/watch?v=XTaoHq0phs0',
@@ -334,6 +328,7 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                     url: '/clients',
                     templateUrl: 'view/clients/clients.html',
                     controller : function($rootScope){
+                        $rootScope.clientsBanner = '' ;
                     }
                 })
             .state('contactUs',
@@ -341,6 +336,7 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                     url: '/contactUs',
                     templateUrl: 'view/contactUs/contactUs.html',
                     controller : function($rootScope){
+                        $rootScope.contactUsBanner = '' ;
                         $rootScope.contactUsDescription = [
                             {
                                 index:1,
