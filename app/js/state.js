@@ -6,7 +6,82 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
             .state('home',
                 {
                     url: '/home',
-                    templateUrl: 'view/home.html'
+                    templateUrl: 'view/home.html',
+                    controller : function($rootScope){
+                        $rootScope.home = {
+                            images : [
+                                "https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb",
+                                "https://cdn.pixabay.com/photo/2016/10/27/22/53/heart-1776746_960_720.jpg",
+                                "https://i.pinimg.com/originals/94/dd/57/94dd573e4b4de604ea7f33548da99fd6.jpg",
+                                "https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=2",
+                                "https://images.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg?auto=compress&cs=tinysrgb&dpr=2",
+                                "https://images.pexels.com/photos/57434/macro-nature-reflection-beautiful-57434.jpeg?auto=compress&cs=tinysrgb&dpr=2",
+                                "https://images.pexels.com/photos/65644/poppy-plant-nature-macro-65644.jpeg?auto=compress&cs=tinysrgb&dpr=2",
+                                "https://wallpaperbrowse.com/media/images/soap-bubble-1958650_960_720.jpg",
+                                "https://wallpaperbrowse.com/media/images/cat-1285634_960_720.png",
+                                "https://images.wallpaperscraft.com/image/beach_tropics_sea_sand_palm_trees_sunset_84729_1280x720.jpg",
+                                "https://images.wallpaperscraft.com/image/beach_tropics_sea_sand_palm_trees_sunset_beautiful_84727_1280x720.jpg",
+                                "https://images.wallpaperscraft.com/image/beach_tropics_sea_sand_palm_trees_beautiful_84742_1280x720.jpg"
+                            ],
+                            news : [
+                                {
+                                    id : 1,
+                                    type:'UPDATE',
+                                    title:'大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大',
+                                    date : '2018-09-22',
+                                    news:true
+                                },
+                                {
+                                    id : 2,
+                                    type:'INFO',
+                                    title:'網站成立',
+                                    date : '2018-09-22',
+                                    news:true
+                                },
+                                {
+                                    id : 3,
+                                    type:'INFO',
+                                    title:'網站成立',
+                                    date : '2018-09-22',
+                                    news:true
+                                },
+                                {
+                                    id : 4,
+                                    type:'INFO',
+                                    title:'網站成立',
+                                    date : '2018-09-22',
+                                    news:false
+                                },
+                                {
+                                    id : 5,
+                                    type:'INFO',
+                                    title:'網站成立',
+                                    date : '2018-09-22',
+                                    news:false
+                                }
+                            ],
+                            events : [
+                                {
+                                    id : 99,
+                                    imageUrl : "https://cdn.pixabay.com/photo/2016/10/27/22/53/heart-1776746_960_720.jpg",
+                                    date : "2018-10-11",
+                                    name : "99"
+                                },
+                                {
+                                    id : 98,
+                                    imageUrl : "https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=2",
+                                    date : "2018-10-12",
+                                    name : "98"
+                                },
+                                {
+                                    id : 97,
+                                    imageUrl : "https://images.pexels.com/photos/65644/poppy-plant-nature-macro-65644.jpeg?auto=compress&cs=tinysrgb&dpr=2",
+                                    date : "2018-10-27",
+                                    name : "97"
+                                }
+                            ]
+                        }
+                    }
                 })
             .state('aboutUs',
                 {
@@ -122,9 +197,9 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                             {
                                 id : 1,
                                 type:'UPDATE',
-                                title:'大埔出獅',
+                                title:'大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大大',
                                 date : '2018-09-22',
-                                news:false
+                                news:true
                             },
                             {
                                 id : 2,
@@ -139,20 +214,6 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                                 title:'網站成立',
                                 date : '2018-09-22',
                                 news:true
-                            },
-                            {
-                                id : 4,
-                                type:'INFO',
-                                title:'網站成立',
-                                date : '2018-09-22',
-                                news:false
-                            },
-                            {
-                                id : 5,
-                                type:'INFO',
-                                title:'網站成立',
-                                date : '2018-09-22',
-                                news:false
                             }
                         ]
                     }
@@ -190,45 +251,6 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                             mapLocation : {lat:22.449514, lng:114.165924},
                             date : "2018-09-09"
                         }
-                    }
-                })
-            .state('contactUs',
-                {
-                    url: '/contactUs',
-                    templateUrl: 'view/contactUs/contactUs.html',
-                    controller : function($rootScope){
-                        $rootScope.contactUsDescription = [
-                            {
-                                index:1,
-                                type:"image",
-                                brAmount:0,
-                                content:"https://cdn.pixabay.com/photo/2016/10/27/22/53/heart-1776746_960_720.jpg"
-                            },
-                            {
-                                index:2,
-                                type:"text",
-                                brAmount:0,
-                                content:"聯絡人: 徐志洪 師傅"
-                            },
-                            {
-                                index:3,
-                                type:"text",
-                                brAmount:0,
-                                content:"電話: (852) 9489 3963"
-                            },
-                            {
-                                index:4,
-                                type:"text",
-                                brAmount:0,
-                                content:"Email: fungfotong.hk@gmail.com"
-                            },
-                            {
-                                index:5,
-                                type:"text",
-                                brAmount:0,
-                                content:"地址: 大埔XXX"
-                            }
-                        ]
                     }
                 })
             .state('events',
@@ -300,14 +322,59 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                                 "https://images.wallpaperscraft.com/image/beach_tropics_sea_sand_palm_trees_beautiful_84742_1280x720.jpg"
                             ],
                             youtubes : [
-                                'https://www.youtube.com/watch?v=tERw7WtWaas',
-                                'https://www.youtube.com/watch?v=qqngLsy_Kh4',
-                                'https://www.youtube.com/watch?v=l6Vf1Ct1K1A'
+                                'https://www.youtube.com/watch?v=XTaoHq0phs0',
+                                'https://www.youtube.com/watch?v=XTaoHq0phs0',
+                                'https://www.youtube.com/watch?v=XTaoHq0phs0'
                             ]
                         }
                     }
                 })
-
+            .state('clients',
+                {
+                    url: '/clients',
+                    templateUrl: 'view/clients/clients.html',
+                    controller : function($rootScope){
+                    }
+                })
+            .state('contactUs',
+                {
+                    url: '/contactUs',
+                    templateUrl: 'view/contactUs/contactUs.html',
+                    controller : function($rootScope){
+                        $rootScope.contactUsDescription = [
+                            {
+                                index:1,
+                                type:"image",
+                                brAmount:0,
+                                content:"https://cdn.pixabay.com/photo/2016/10/27/22/53/heart-1776746_960_720.jpg"
+                            },
+                            {
+                                index:2,
+                                type:"text",
+                                brAmount:0,
+                                content:"聯絡人: 徐志洪 師傅"
+                            },
+                            {
+                                index:3,
+                                type:"text",
+                                brAmount:0,
+                                content:"電話: (852) 9489 3963"
+                            },
+                            {
+                                index:4,
+                                type:"text",
+                                brAmount:0,
+                                content:"Email: fungfotong.hk@gmail.com"
+                            },
+                            {
+                                index:5,
+                                type:"text",
+                                brAmount:0,
+                                content:"地址: 大埔XXX"
+                            }
+                        ]
+                    }
+                })
 
         $urlRouterProvider.otherwise('/home');
     }

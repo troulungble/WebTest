@@ -10,9 +10,9 @@
                         <div class="content">
                             <img class="banner" src="{{eventsBanner}}" ng-show="highlightBanner"/>
                             <div class="col-md-12">
-                                <div class="well col-md-3 highlight-cell" ng-repeat="event in eventsList | orderBy:'-id'">
+                                <div class="well col-md-3 event-cell" ng-repeat="event in eventsList | orderBy:'-id'">
                                     <a title="{{event.name}}" href="#!/events/details/{{event.id}}">
-                                        <img class="highlight-image" src="{{event.imageUrl}}">
+                                        <img class="event-image" src="{{event.imageUrl}}">
                                     </a>
                                     <div>
                                         {{event.name}}

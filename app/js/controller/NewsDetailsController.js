@@ -52,7 +52,8 @@ angular.module('myApp').controller('NewsDetailsController',
                 "click": {
                     "modal": false
                 },
-                "transition": "rotateLR"
+                "transition": "rotateLR",
+                "size": 'contain'
             },
             "autoplay": {
                 enabled: true, // slideshow play enabled/disabled

@@ -15,28 +15,58 @@
 
                         <div class="content">
                             <br>
-                            <p>
-                                {{event.description}}
-                            </p>
+                            <table class="eventTable">
+                                <tr>
+                                    <td>
+                                        <p>
+                                            {{event.description}}
+                                        </p>
+                                    </td>
+                                    <td rowspan="2" style="width: 30%;">
+                                        <div class="header">
+                                            影片
+                                        </div>
+                                        <div ng-show="event.youtubes.length>0" class="video-vertical-card">
+                                            <div ng-repeat="url in event.youtubes">
+                                                <ng-youtube-embed
+                                                        video="url"
+                                                        autoplay="false"
+                                                        color="white"
+                                                        disablekb="true"
+                                                        end="20">
+                                                </ng-youtube-embed>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="header">
+                                            相冊
+                                        </div>
+                                        <div ng-show="event.images.length>0">
+                                            <asg-image data-id="gallery" data-options="eventsGalleryOptions" data-items="event.images">
+                                                <asg-modal data-visible="false"></asg-modal>
+                                                <asg-thumbnail class="event-asg-thumbnail"></asg-thumbnail>
+                                            </asg-image>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
 
-                            <div ng-show="event.images.length>0">
-                                <asg-image data-id="gallery" data-options="eventsGalleryOptions" data-items="event.images">
-                                    <asg-modal data-visible="false"></asg-modal>
-                                    <asg-thumbnail class="event-asg-thumbnail"></asg-thumbnail>
-                                </asg-image>
-                            </div>
 
-                            <div ng-show="event.youtubes.length>0">
-                                <div ng-repeat="url in event.youtubes">
-                                    <ng-youtube-embed
-                                            video="url"
-                                            autoplay="false"
-                                            color="white"
-                                            disablekb="true"
-                                            end="20">
-                                    </ng-youtube-embed>
-                                </div>
-                            </div>
+
+                            <!--<div ng-show="event.youtubes.length>0">-->
+                                <!--<div ng-repeat="url in event.youtubes">-->
+                                    <!--<ng-youtube-embed-->
+                                            <!--video="url"-->
+                                            <!--autoplay="false"-->
+                                            <!--color="white"-->
+                                            <!--disablekb="true"-->
+                                            <!--end="20">-->
+                                    <!--</ng-youtube-embed>-->
+                                <!--</div>-->
+                            <!--</div>-->
 
                             <!--<div id="map" style="height: 400px;width: 100%" ng-show="news.mapLocation!=null"></div>-->
                             <!--<script>-->
