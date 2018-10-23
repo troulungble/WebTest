@@ -7,7 +7,8 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                 {
                     url: '/home',
                     templateUrl: 'view/home.html',
-                    controller : function($rootScope){
+                    controller : function($window, $rootScope){
+                        $window.scrollTo(0, 0);
                         $rootScope.home = {
                             images : [
                                 "https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb",
@@ -93,7 +94,8 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                 {
                     url: '/purpose',
                     templateUrl: 'view/aboutUs/purpose.html',
-                    controller : function($rootScope){
+                    controller : function($window, $rootScope){
+                        $window.scrollTo(0, 0);
                         $rootScope.purposeBanner = '' ;
                         $rootScope.purposeDescription = [
                             {
@@ -138,7 +140,8 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                 {
                     url: '/origin',
                     templateUrl: 'view/aboutUs/origin.html',
-                    controller : function($rootScope){
+                    controller : function($window, $rootScope){
+                        $window.scrollTo(0, 0);
                         $rootScope.originBanner =  '' ;
                         $rootScope.originDescription = [
                             {
@@ -189,7 +192,8 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                 {
                     url: '/list',
                     templateUrl: 'view/news/list.html',
-                    controller : function($rootScope){
+                    controller : function($window, $rootScope){
+                        $window.scrollTo(0, 0);
                         $rootScope.newsBanner = '' ;
                         $rootScope.newsTotalNumber = 100 ;
                         $rootScope.newsCurrentPage = 1 ;
@@ -223,7 +227,8 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                 {
                     url: '/details/:id',
                     templateUrl: 'view/news/details.html',
-                    controller : function($rootScope, $stateParams){
+                    controller : function($window, $rootScope, $stateParams){
+                        $window.scrollTo(0, 0);
                         $rootScope.news = {
                             id : 1,
                             title : "標題",
@@ -263,7 +268,8 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                 {
                     url: '/list',
                     templateUrl: 'view/events/list.html',
-                    controller : function($rootScope){
+                    controller : function($window, $rootScope){
+                        $window.scrollTo(0, 0);
                         $rootScope.eventsBanner = '' ;
                         $rootScope.eventsList = [
                             {
@@ -298,7 +304,8 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                 {
                     url: '/details/:id',
                     templateUrl: 'view/events/details.html',
-                    controller : function($rootScope, $stateParams){
+                    controller : function($window, $rootScope, $stateParams){
+                        $window.scrollTo(0, 0);
                         $rootScope.event = {
                             name : "出獅",
                             description : "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~\n" +
@@ -327,7 +334,8 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                 {
                     url: '/clients',
                     templateUrl: 'view/clients/clients.html',
-                    controller : function($rootScope){
+                    controller : function($window, $rootScope){
+                        $window.scrollTo(0, 0);
                         $rootScope.clientsBanner = '' ;
                     }
                 })
@@ -335,7 +343,8 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                 {
                     url: '/contactUs',
                     templateUrl: 'view/contactUs/contactUs.html',
-                    controller : function($rootScope){
+                    controller : function($window,$rootScope){
+                        $window.scrollTo(0, 0);
                         $rootScope.contactUsBanner = '' ;
                         $rootScope.contactUsDescription = [
                             {
@@ -369,6 +378,22 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                                 content:"地址: 大埔XXX"
                             }
                         ]
+                    }
+                })
+            .state('disclaimer',
+                {
+                    url: '/disclaimer',
+                    templateUrl: 'view/disclaimer.html',
+                    controller : function($window){
+                        $window.scrollTo(0, 0);
+                    }
+                })
+            .state('copyright',
+                {
+                    url: '/copyright',
+                    templateUrl: 'view/copyright.html',
+                    controller : function($window){
+                        $window.scrollTo(0, 0);
                     }
                 })
 
