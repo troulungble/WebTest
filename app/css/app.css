@@ -193,13 +193,13 @@
 
 body{
     font-family: "微軟正黑體 Light" ;
-    background-image: url("../images/background.bmp");
+    background-image: url("../images/background.png");
     background-repeat : repeat-y;
 }
 
 .menu-navigation{
     /*background: rgba(0, 0, 0, 0) !important;*/
-    background-image: url("../images/background.bmp");
+    background-image: url("../images/background.png");
     background-repeat: no-repeat;
 }
 
