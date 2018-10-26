@@ -11,6 +11,7 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                         $window.scrollTo(0, 0);
                         $rootScope.home = {
                             images : [
+                                "http://directremovals.ie/wp-content/uploads/2015/05/bannerRED2.png",
                                 "https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb",
                                 "https://cdn.pixabay.com/photo/2016/10/27/22/53/heart-1776746_960_720.jpg",
                                 "https://i.pinimg.com/originals/94/dd/57/94dd573e4b4de604ea7f33548da99fd6.jpg",
@@ -194,7 +195,7 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                     templateUrl: 'view/news/list.html',
                     controller : function($window, $rootScope){
                         $window.scrollTo(0, 0);
-                        $rootScope.newsBanner = '' ;
+                        $rootScope.newsBanner = null ;
                         $rootScope.newsTotalNumber = 100 ;
                         $rootScope.newsCurrentPage = 1 ;
 
@@ -323,9 +324,9 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                                 "https://images.pexels.com/photos/57434/macro-nature-reflection-beautiful-57434.jpeg?auto=compress&cs=tinysrgb&dpr=2"
                             ],
                             youtubes : [
-                                'https://www.youtube.com/watch?v=XTaoHq0phs0',
-                                'https://www.youtube.com/watch?v=XTaoHq0phs0',
-                                'https://www.youtube.com/watch?v=XTaoHq0phs0'
+                                "https://www.youtube.com/watch?v=XTaoHq0phs0",
+                                "https://www.youtube.com/watch?v=yiDp4YAfVX0",
+                                "https://www.youtube.com/watch?v=-Pb7XRisQUo"
                             ]
                         }
                     }

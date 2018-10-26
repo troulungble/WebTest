@@ -3,8 +3,6 @@
 angular.module('myApp').controller('ContactUsController',
     ["$rootScope","$scope",
     function($rootScope,$scope) {
-        console.info("ContactUsController") ;
-
         $scope.uluru = {lat: 22.449514, lng: 114.165924};
         console.info($scope.uluru) ;
         var dom_el = document.querySelector('[ng-controller="ContactUsController"]');
