@@ -9,7 +9,7 @@
                 <div class="well main-well col-md-12 float-left">
                     <div class="well sub-well float-left">
                         <div class="content">
-                            <p ng-repeat="descObject in originDescription | orderBy:'index'">
+                            <p ng-repeat="descObject in originDescription | orderBy:'id'">
                                 <br ng-repeat="n in [] | range:descObject.brAmount" />
                                 <img ng-if="descObject.type == 'image'" class="float-right image-w200" style="margin:10px"
                                      src="{{descObject.content}}">

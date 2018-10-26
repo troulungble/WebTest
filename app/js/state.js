@@ -99,13 +99,13 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                         $rootScope.purposeBanner = '' ;
                         $rootScope.purposeDescription = [
                             {
-                                index:1,
+                                id:1,
                                 type:"image",
                                 brAmount:0,
                                 content:"https://cdn.pixabay.com/photo/2016/10/27/22/53/heart-1776746_960_720.jpg"
                             },
                             {
-                                index:2,
+                                id:2,
                                 type:"text",
                                 brAmount:0,
                                 content:"文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~" +
@@ -118,13 +118,13 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                                     "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~"
                             },
                             {
-                                index:3,
+                                id:3,
                                 type:"image",
                                 brAmount:0,
                                 content:"https://cdn.pixabay.com/photo/2016/10/27/22/53/heart-1776746_960_720.jpg"
                             },
                             {
-                                index:4,
+                                id:4,
                                 type:"text",
                                 brAmount:0,
                                 content:"文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~" +
@@ -145,13 +145,13 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                         $rootScope.originBanner =  '' ;
                         $rootScope.originDescription = [
                             {
-                                index:1,
+                                id:1,
                                 type:"image",
                                 brAmount:0,
                                 content:"https://cdn.pixabay.com/photo/2016/10/27/22/53/heart-1776746_960_720.jpg"
                             },
                             {
-                                index:2,
+                                id:2,
                                 type:"text",
                                 brAmount:0,
                                 content:"文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~" +
@@ -164,13 +164,13 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider',
                                     "文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~"
                             },
                             {
-                                index:3,
+                                id:3,
                                 type:"image",
                                 brAmount:0,
                                 content:"https://i.pinimg.com/originals/94/dd/57/94dd573e4b4de604ea7f33548da99fd6.jpg"
                             },
                             {
-                                index:4,
+                                id:4,
                                 type:"text",
                                 brAmount:0,
                                 content:"文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~文字~" +
