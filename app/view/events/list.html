@@ -10,7 +10,7 @@
                     <div class="well sub-well col-md-12">
                         <div class="content">
                             <div class="col-md-12">
-                                <div class="well col-md-3 event-cell" ng-repeat="event in eventsList | orderBy:'-id'">
+                                <div class="well col-md-3 event-cell" ng-repeat="event in eventsList | orderBy:['-date','-id']">
                                     <a title="{{event.name}}" href="#!/events/details/{{event.id}}">
                                         <img class="event-image" src="{{event.imageUrl}}">
                                     </a>

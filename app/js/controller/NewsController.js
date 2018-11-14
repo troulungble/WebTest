@@ -1,16 +1,18 @@
 'use strict';
 
 angular.module('myApp').controller('NewsController',
-    ["$rootScope","$scope", "constantVariable",
-    function($rootScope,$scope,constantVariable) {
+    ["$rootScope","$scope", "constantVariable", "BackendService", "$window",
+    function($rootScope,$scope,constantVariable, BackendService, $window) {
         $scope.updateNew = function(newPageNews){
             var code = "" ;
             angular.forEach(newPageNews, function (obj, key) {
                 code += "<div class='news'>" ;
                 if (obj.type==='EVENT'){
-                    code += "<div class='badge badge-status left badge-warning'>活動" ;
+                    code += "<div class='badge badge-status left badge-success'>活動" ;
                 }else if (obj.type==='INFO') {
                     code += "<div class='badge badge-status left badge-info'>公告" ;
+                }else if (obj.type==='UPDATE') {
+                    code += "<div class='badge badge-status left badge-warning'>更新";
                 }
                 code += "</div>" ;
                 code += "<div class='date'>" + obj.date + "</div>" ;
@@ -23,6 +25,7 @@ angular.module('myApp').controller('NewsController',
                 code += "</div>" ;
             });
             angular.element(document.getElementById("newsContent")).html(code);
+            $window.scrollTo(0, 0);
         }
 
         //init News
@@ -44,31 +47,23 @@ angular.module('myApp').controller('NewsController',
             lastClass: 'last',
             firstClass: 'first'
         }).on("page", function(event, num){
-            var newPageNews = [
-                {
-                    id : 1,
-                    type:'INFO',
-                    title:'網站成立' + num,
-                    date : '2018-09-22',
-                    news:true
-                },
-                {
-                    id : 2,
-                    type:'EVENT',
-                    title:'大埔出獅' + num,
-                    date : '2018-09-22',
-                    news:false
-                },
-                {
-                    id : 2,
-                    type:'EVENT',
-                    title:'大埔出獅' + num,
-                    date : '2018-09-22',
-                    news:false
-                }
-            ] ;
-
-            $scope.updateNew(newPageNews) ;
+            BackendService.getNewsPageContent(num-1)
+                .then(
+                    function (response) {
+                        $rootScope.newsTotalNumber = response.totalNumber ;
+                        $rootScope.newsCurrentPage = response.currentPage ;
+                        $rootScope.newsList = response.news ;
+                        var newPageNews = response.news ;
+                        $scope.updateNew(newPageNews) ;
+                    },
+                    function (errResponse) {
+                        $rootScope.newsTotalNumber = 0;
+                        $rootScope.newsCurrentPage = 0 ;
+                        $rootScope.newsList = [] ;
+                        var newPageNews = [] ;
+                        $scope.updateNew(newPageNews) ;
+                    }
+                );
         });
     }
     ]

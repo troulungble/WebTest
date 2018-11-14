@@ -18,8 +18,8 @@
                             <table class="eventTable">
                                 <tr>
                                     <td>
-                                        <p>
-                                            {{event.description}}
+                                        <p ng-repeat="desc in event.description">
+                                            {{desc}}
                                         </p>
                                     </td>
                                     <td rowspan="2" style="width: 30%;" ng-show="event.youtubes.length>0">

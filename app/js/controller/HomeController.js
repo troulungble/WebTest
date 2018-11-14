@@ -138,10 +138,12 @@ angular.module('myApp').controller('HomeController',
             var code = "" ;
             angular.forEach(newPageNews, function (obj, key) {
                 code += "<div class='news col-md-12'>" ;
-                if (obj.type==='UPDATE'){
-                    code += "<div class='badge badge-status left badge-warning float-left' style='margin-right: 10px''>活動" ;
+                if (obj.type==='EVENT'){
+                    code += "<div class='badge badge-status left badge-success float-left' style='margin-right: 10px''>活動" ;
                 }else if (obj.type==='INFO') {
                     code += "<div class='badge badge-status left badge-info float-left' style='margin-right: 10px'>公告" ;
+                }else if (obj.type==='UPDATE') {
+                    code += "<div class='badge badge-status left badge-warning float-left' style='margin-right: 10px'>更新" ;
                 }
                 code += "</div>" ;
                 if (obj.news){

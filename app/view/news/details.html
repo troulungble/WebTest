@@ -3,10 +3,12 @@
         <div class="row">
             <div class="page-header">
                 <div class="badge badge-status left
-                    {{news.type=='UPDATE'?'badge-warning':''}}
-                    {{news.type=='INFO'?'badge-info':''}}">
-                    {{news.type=='UPDATE'?'活動':''}}
+                    {{news.type=='EVENT'?'badge-success':''}}
+                    {{news.type=='INFO'?'badge-info':''}}
+                    {{news.type=='UPDATE'?'badge-warning':''}}">
+                    {{news.type=='EVENT'?'活動':''}}
                     {{news.type=='INFO'?'公告':''}}
+                    {{news.type=='UPDATE'?'更新':''}}
                 </div>
                 {{news.title}}
             </div>

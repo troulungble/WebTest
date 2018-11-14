@@ -17,7 +17,18 @@ angular.module('myApp').config(function(ezfbProvider) {
 });
 
 angular.module('myApp').constant('constantVariable', {
-    PAGE_SIZE : 15
+    PAGE_SIZE : 15,
+    BACKEND_URL : "http://localhost:4260/adminPortal/webPageApi",
+    BACKEND_HOME : "/home",
+    BACKEND_PURPOSE: "/purpose",
+    BACKEND_ORIGIN : "/origin",
+    BACKEND_NEWS : "/news/",
+    BACKEND_NEWS_DETAILS : "/newsDetails/",
+    BACKEND_EVENTS : "/events/",
+    BACKEND_EVENT_DETAILS : "/eventDetails/",
+    BACKEND_CLIENTS : "/clientUs",
+    BACKEND_CONTACT_US : "/contactUs",
+    BACKEND_BANNER_URL : "http://localhost:4260/adminPortal/downloadImages/banner/",
 });
 
 angular.module('myApp').filter('range', function() {

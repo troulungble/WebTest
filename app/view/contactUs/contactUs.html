@@ -9,23 +9,11 @@
                 <div class="well main-well col-md-8" style="right:5px;">
                     <div class="well sub-well">
                         <div class="content">
-
                             <p class="float-right" style="margin:10px;">
-                                <img class="image-w200" src="https://cdn.pixabay.com/photo/2016/10/27/22/53/heart-1776746_960_720.jpg">
+                                <img class="image-w200" ng-src="{{contactUsDescription.image}}">
                             </p>
-
-                            <p>
-                                聯絡人: 徐志洪 師傅
-                            </p>
-
-                            <p>
-                                電話: (852) 9489 3963
-                            </p>
-                            <p>
-                                Email: fungfotong.hk@gmail.com
-                            </p>
-                            <p>
-                                地址: 大埔XXX
+                            <p ng-repeat="desc in contactUsDescription.text">
+                                {{desc}}
                             </p>
                             <div id="map" style="height: 400px;width: 100%"></div>
                             <script>
