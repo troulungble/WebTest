@@ -200,7 +200,6 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider', 'constan
                         else
                             $rootScope.clientsBanner = '' ;
                         $rootScope.clientsDescription = content ;
-                        console.info(content) ;
                     }
                 })
             .state('contactUs',
