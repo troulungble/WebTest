@@ -1,14 +1,41 @@
-<div class="main-container" ng-controller="NewsController">
-    <div class="container" >
+<div class="main-container" ng-controller="ClientsController">
+    <div class="container">
         <div class="row">
             <div class="page-header" ng-show="!clientsBanner">
                 客戶專區
             </div>
             <img class="banner" src="{{clientsBanner}}" ng-show="clientsBanner"/>
             <div clas="col-md-12">
-                <div class="well main-well col-md-12">
-                    <div class="well sub-well">
-                        <div class="content">
+                <div class="well main-well col-md-12" style="right:5px;">
+                    <div class="well sub-well col-sm-12">
+                        <div class="content col-sm-12">
+                            <table class="clientsTable col-sm-12">
+                                <tr>
+                                    <td class="col-sm-9">
+                                        <p ng-repeat="desc in clientsDescription.text">
+                                            {{desc}}
+                                        </p>
+                                    </td>
+                                    <td class="col-sm-3" rowspan="2">
+                                        <div class="video-vertical-card">
+                                            <div ng-repeat="imgRight in clientsDescription.imagesRight">
+                                                <br ng-show="$index>0">
+                                                <img ng-src="{{imgRight}}" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr ng-show="clientsDescription.imagesBottom.length>0">
+                                    <td>
+                                        <div>
+                                            <asg-image data-id="clientsGallery" data-options="clientsGalleryOptions" data-items="clientsDescription.imagesBottom">
+                                                <asg-modal data-visible="false"></asg-modal>
+                                                <asg-thumbnail class="clients-asg-thumbnail"></asg-thumbnail>
+                                            </asg-image>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                 </div>

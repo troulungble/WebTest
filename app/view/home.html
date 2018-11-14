@@ -1,20 +1,20 @@
 <div class="main-container" ng-controller="HomeController">
     <div class="container" style="margin-top: 20px">
         <div class="row">
-            <div class="col-md-12">
-                <div class="well main-well col-md-12">
-                    <div class="well sub-well">
-                        <div class="content">
+            <div class="col-sm12">
+                <div class="well main-well col-sm-12">
+                    <div class="well sub-well col-sm-12">
+                        <div class="content col-sm-12">
                             <div ng-show="home.images.length>0" class="homeGalleryDiv">
                                 <asg-image data-id="homeGallery" data-options="homeGalleryOptions" data-items="home.images">
                                     <asg-modal data-visible="false" style="margin: 20px"></asg-modal>
                                 </asg-image>
                             </div>
                         </div>
-                        <div class="homeTable" style="">
-                            <table>
+                        <div class="homeTable">
+                            <table class="col-sm-12">
                                 <tr>
-                                    <td style="padding-right: 20px;width: 65%;height:220px">
+                                    <td style="padding-right: 20px;height:220px" class="col-sm-8">
                                         <div class="header">
                                             最新消息
                                             <a class="header-more float-right" title="最新消息" href="#!/news/list">更多 >></a>
@@ -22,7 +22,7 @@
                                         <div id="newsContent">
                                         </div>
                                     </td>
-                                    <td rowspan="2" style="width: 35%;">
+                                    <td rowspan="2" class="col-sm-4">
                                         <div class="header">
                                             Facebook 專頁
                                         </div>
@@ -32,13 +32,13 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="padding-top:10px;padding-right: 20px; width: 65%;">
+                                    <td style="padding-top:10px;padding-right: 20px;" class="col-sm-8">
                                         <div class="header">
                                             最新活動花絮
                                             <a class="header-more float-right" title="活動花絮" href="#!/events/list">更多 >></a>
                                         </div>
-                                        <div>
-                                            <div class="well col-md-3 home-event-cell" ng-repeat="event in home.events | orderBy:['-date','-id']">
+                                        <div clas="col-sm-12">
+                                            <div class="well home-event-cell col-sm-3" ng-repeat="event in home.events | orderBy:['-date','-id']">
                                                 <a title="{{event.name}}" href="#!/events/details/{{event.id}}">
                                                     <img class="home-event-image" src="{{event.imageUrl}}">
                                                 </a>

@@ -1357,7 +1357,7 @@ nav {
 
 .nav-bar a {
     display: inline-block;
-    height: 55px;
+    /*height: 55px;*/
 }
 
 .logo {

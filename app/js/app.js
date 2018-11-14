@@ -26,7 +26,7 @@ angular.module('myApp').constant('constantVariable', {
     BACKEND_NEWS_DETAILS : "/newsDetails/",
     BACKEND_EVENTS : "/events/",
     BACKEND_EVENT_DETAILS : "/eventDetails/",
-    BACKEND_CLIENTS : "/clientUs",
+    BACKEND_CLIENTS : "/clients",
     BACKEND_CONTACT_US : "/contactUs",
     BACKEND_BANNER_URL : "http://localhost:4260/adminPortal/downloadImages/banner/",
 });

@@ -181,9 +181,26 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider', 'constan
                 {
                     url: '/clients',
                     templateUrl: 'view/clients/clients.html',
-                    controller : function($window, $rootScope){
+                    resolve: {
+                        banner: function ($q, BackendService) {
+                            var deferred = $q.defer();
+                            BackendService.getBanner("CLIENTS").then(deferred.resolve, deferred.resolve);
+                            return deferred.promise;
+                        },
+                        content: function ($q, BackendService) {
+                            var deferred = $q.defer();
+                            BackendService.getClientsPageContent().then(deferred.resolve, deferred.resolve);
+                            return deferred.promise;
+                        }
+                    },
+                    controller : function($window, $rootScope, banner, content){
                         $window.scrollTo(0, 0);
-                        $rootScope.clientsBanner = '' ;
+                        if (banner)
+                            $rootScope.clientsBanner = constantVariable.BACKEND_BANNER_URL + "CLIENTS" ;
+                        else
+                            $rootScope.clientsBanner = '' ;
+                        $rootScope.clientsDescription = content ;
+                        console.info(content) ;
                     }
                 })
             .state('contactUs',

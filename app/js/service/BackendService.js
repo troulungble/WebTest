@@ -10,7 +10,7 @@ angular.module('myApp').factory('BackendService',
             getNewsDetailsPageContent: getNewsDetailsPageContent,
             getEventsPageContent: getEventsPageContent,
             getEventDetailsContent : getEventDetailsContent,
-            // getClientsPageContent : getClientsPageContent,
+            getClientsPageContent : getClientsPageContent,
             getContactUsPageContent : getContactUsPageContent,
             getBanner: getBanner,
         };
@@ -103,6 +103,20 @@ angular.module('myApp').factory('BackendService',
         function getEventDetailsContent(id) {
             var deferred = $q.defer();
             $http.get(constantVariable.BACKEND_URL + constantVariable.BACKEND_EVENT_DETAILS + id)
+                .then(
+                    function (response) {
+                        deferred.resolve(response.data);
+                    },
+                    function (errResponse) {
+                        deferred.reject(errResponse);
+                    }
+                );
+            return deferred.promise;
+        }
+
+        function getClientsPageContent() {
+            var deferred = $q.defer();
+            $http.get(constantVariable.BACKEND_URL + constantVariable.BACKEND_CLIENTS)
                 .then(
                     function (response) {
                         deferred.resolve(response.data);
