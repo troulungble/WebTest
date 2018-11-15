@@ -1,7 +1,16 @@
 'use strict';
 
-angular.module('myApp').config(['$stateProvider', '$urlRouterProvider', 'constantVariable',
-    function($stateProvider, $urlRouterProvider, constantVariable) {
+angular.module('myApp').config(['$stateProvider', '$urlRouterProvider', 'constantVariable', "$httpProvider",
+    function($stateProvider, $urlRouterProvider, constantVariable, $httpProvider) {
+        if (!$httpProvider.defaults.headers.get){
+            $httpProvider.defaults.headers.get = {} ;
+        }
+        $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest' ;
+        $httpProvider.defaults.headers.get['Cache-Control'] = 'no-cache' ;
+        $httpProvider.defaults.headers.get['Pragma'] = 'no-cache' ;
+
+        $urlRouterProvider.otherwise('/home');
+
         $stateProvider
             .state('home',
                 {
@@ -243,7 +252,5 @@ angular.module('myApp').config(['$stateProvider', '$urlRouterProvider', 'constan
                         $window.scrollTo(0, 0);
                     }
                 })
-
-        $urlRouterProvider.otherwise('/home');
     }
 ]);
