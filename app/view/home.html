@@ -39,7 +39,7 @@
                                         </div>
                                         <div clas="col-sm-12">
                                             <div class="well home-event-cell col-sm-3" ng-repeat="event in home.events | orderBy:['-date','-id']">
-                                                <atitle="{{event.name}}" href="#!/events/details/{{event.id}}">
+                                                <a title="{{event.name}}" href="#!/events/details/{{event.id}}">
                                                     <img class="home-event-image" src="{{event.imageUrl}}">
                                                 </a>
                                                 <div class="one-line-text">
