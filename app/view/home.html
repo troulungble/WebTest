@@ -1,5 +1,5 @@
 <div class="main-container" ng-controller="HomeController">
-    <div class="container" style="margin-top: 20px">
+    <div class="container backgroundImage" style="padding-top: 20px;">
         <div class="row">
             <div class="col-sm12">
                 <div class="well main-well col-sm-12">
@@ -39,10 +39,10 @@
                                         </div>
                                         <div clas="col-sm-12">
                                             <div class="well home-event-cell col-sm-3" ng-repeat="event in home.events | orderBy:['-date','-id']">
-                                                <a title="{{event.name}}" href="#!/events/details/{{event.id}}">
+                                                <atitle="{{event.name}}" href="#!/events/details/{{event.id}}">
                                                     <img class="home-event-image" src="{{event.imageUrl}}">
                                                 </a>
-                                                <div>
+                                                <div class="one-line-text">
                                                     {{event.name}}
                                                 </div>
                                                 <div class="date-2" style="margin-bottom: 0px">

@@ -1,5 +1,5 @@
 <div class="main-container" ng-controller="EventsController">
-    <div class="container" >
+    <div class="container backgroundImage">
         <div class="row">
             <div class="page-header" ng-show="!eventsBanner">
                 活動花絮
@@ -14,7 +14,7 @@
                                     <a title="{{event.name}}" href="#!/events/details/{{event.id}}">
                                         <img class="event-image" src="{{event.imageUrl}}">
                                     </a>
-                                    <div>
+                                    <div class="one-line-text">
                                         {{event.name}}
                                     </div>
                                     <div class="date-2" style="margin-bottom: 0px">

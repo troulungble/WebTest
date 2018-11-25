@@ -1,5 +1,5 @@
 <div class="main-container" ng-controller="ContactUsController">
-    <div class="container" >
+    <div class="container backgroundImage">
         <div class="row">
             <div class="page-header" ng-show="!contactUsBanner">
                 聯絡我們
@@ -10,7 +10,7 @@
                     <div class="well sub-well">
                         <div class="content">
                             <p class="float-right" style="margin:10px;">
-                                <img class="image-w200" ng-src="{{contactUsDescription.image}}">
+                                <img class="image-w300" ng-src="{{contactUsDescription.image}}">
                             </p>
                             <p ng-repeat="desc in contactUsDescription.text">
                                 {{desc}}

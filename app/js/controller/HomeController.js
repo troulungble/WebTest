@@ -138,20 +138,31 @@ angular.module('myApp').controller('HomeController',
             var code = "" ;
             angular.forEach(newPageNews, function (obj, key) {
                 code += "<div class='news col-md-12'>" ;
-                if (obj.type==='EVENT'){
-                    code += "<div class='badge badge-status left badge-success float-left' style='margin-right: 10px''>活動" ;
-                }else if (obj.type==='INFO') {
-                    code += "<div class='badge badge-status left badge-info float-left' style='margin-right: 10px'>公告" ;
-                }else if (obj.type==='UPDATE') {
-                    code += "<div class='badge badge-status left badge-warning float-left' style='margin-right: 10px'>更新" ;
-                }
-                code += "</div>" ;
-                code += "<div class='date'>" + obj.date + "</div>" ;
-                code += "<a class='col-md-6 one-line-text' href='#!/news/details/" + obj.id + "'>" + obj.title ;
-                if (obj.news){
-                    code += "<span class='badge badge-status badge-danger' style='margin-left: 10px'>NEW!</span>" ;
-                }
-                code += "</a>" ;
+                    if (obj.type==='EVENT'){
+                        code += "<div class='col-md-1'><div class='badge badge-status left badge-success float-left' style='margin-right: 10px''>活動" ;
+                    }else if (obj.type==='INFO') {
+                        code += "<div class='col-md-1'><div class='badge badge-status left badge-info float-left' style='margin-right: 10px'>公告" ;
+                    }else if (obj.type==='UPDATE') {
+                        code += "<div class='col-md-1'><div class='badge badge-status left badge-warning float-left' style='margin-right: 10px'>更新" ;
+                    }
+                    code += "</div></div>" ;
+
+                    code += "<div class='col-md-7'>" ;
+                        code += "<a href='#!/news/details/" + obj.id + "'>" ;
+                            code += obj.title ;
+                        code += "</a>" ;
+                    code += "</div>" ;
+
+                    if (obj.news){
+                        code += "<div class='col-md-1'>" ;
+                        code += "<div class='badge badge-status badge-danger float-right' style='margin-left: 10px'>NEW!</div>" ;
+                        code += "</div>" ;
+                    }
+
+
+
+                    code += "<div class='col-md-2 date'>" + obj.date + "</div>" ;
+
                 code += "</div>" ;
             });
             angular.element(document.getElementById("newsContent")).html(code);

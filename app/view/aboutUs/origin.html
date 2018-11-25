@@ -1,5 +1,5 @@
 <div class="main-container">
-    <div class="container" >
+    <div class="container backgroundImage">
         <div class="row">
             <div class="page-header" ng-show="!originBanner">
                 武術源流
@@ -9,9 +9,9 @@
                 <div class="well main-well col-md-12 float-left">
                     <div class="well sub-well float-left col-md-12">
                         <div class="content">
-                            <p ng-repeat="descObject in originDescription | orderBy:'id'">
+                            <p style="text-align:justify;" ng-repeat="descObject in originDescription | orderBy:'id'">
                                 <br ng-repeat="n in [] | range:descObject.brAmount" />
-                                <img ng-if="descObject.type == 'image'" class="float-right image-w200" style="margin:10px"
+                                <img ng-if="descObject.type == 'image'" class="float-right image-w300" style="margin:10px"
                                      src="{{descObject.content}}">
                                 <span ng-if="descObject.type == 'text'" >
                                     {{descObject.content}}

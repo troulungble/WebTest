@@ -83,7 +83,7 @@ angular.module('myApp').controller('EventsDetailsController',
             thumbnail: {
                 height: 50, // thumbnail image height in pixel
                 index: false, // show index number on thumbnail
-                dynamic: false, // if true thumbnails visible only when mouseover
+                dynamic: true, // if true thumbnails visible only when mouseover
                 autohide: true, // hide thumbnail component when single image
                 click: {
                     select: true, // set selected image when true

@@ -1981,8 +1981,13 @@ pre code {
 }
 
 .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 70px;
+    padding-left: 70px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.nav-container {
     margin-right: auto;
     margin-left: auto
 }

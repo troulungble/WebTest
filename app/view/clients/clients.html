@@ -1,5 +1,5 @@
 <div class="main-container" ng-controller="ClientsController">
-    <div class="container">
+    <div class="container backgroundImage">
         <div class="row">
             <div class="page-header" ng-show="!clientsBanner">
                 客戶專區
@@ -7,17 +7,17 @@
             <img class="banner" src="{{clientsBanner}}" ng-show="clientsBanner"/>
             <div clas="col-sm-12">
                 <div class="well main-well col-sm-12" style="right:5px;">
-                    <div class="well sub-well col-sm-12">
-                        <div class="content col-sm-12">
-                            <table class="clientsTable col-sm-12">
+                    <div class="well sub-well">
+                        <div class="content ">
+                            <table class="clientsTable">
                                 <tr>
-                                    <td class="col-sm-9">
+                                    <td class="">
                                         <p ng-repeat="desc in clientsDescription.text">
                                             {{desc}}
                                         </p>
                                     </td>
-                                    <td class="col-sm-3" rowspan="2">
-                                        <div class="video-vertical-card">
+                                    <td rowspan="2" style="width: 40%;" >
+                                        <div class="image-vertical-card">
                                             <div ng-repeat="imgRight in clientsDescription.imagesRight">
                                                 <br ng-show="$index>0">
                                                 <img ng-src="{{imgRight}}" />

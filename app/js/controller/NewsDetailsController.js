@@ -52,7 +52,7 @@ angular.module('myApp').controller('NewsDetailsController',
                     height: 50, // thumbnail image height in pixel
                     index: false, // show index number on thumbnail
                     enabled: true, // enable/disable thumbnails
-                    dynamic: false, // if true thumbnails visible only when mouseover
+                    dynamic: true, // if true thumbnails visible only when mouseover
                     autohide: true, // hide thumbnail component when single image
                     click: {
                         select: true, // set selected image when true
@@ -83,7 +83,7 @@ angular.module('myApp').controller('NewsDetailsController',
             thumbnail: {
                 height: 50, // thumbnail image height in pixel
                 index: false, // show index number on thumbnail
-                dynamic: false, // if true thumbnails visible only when mouseover
+                dynamic: true, // if true thumbnails visible only when mouseover
                 autohide: true, // hide thumbnail component when single image
                 click: {
                     select: true, // set selected image when true

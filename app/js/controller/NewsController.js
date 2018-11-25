@@ -8,15 +8,15 @@ angular.module('myApp').controller('NewsController',
             angular.forEach(newPageNews, function (obj, key) {
                 code += "<div class='news'>" ;
                 if (obj.type==='EVENT'){
-                    code += "<div class='badge badge-status left badge-success'>活動" ;
+                    code += "<div class='badge badge-status left badge-success' style='font-size: 100%;'>活動" ;
                 }else if (obj.type==='INFO') {
-                    code += "<div class='badge badge-status left badge-info'>公告" ;
+                    code += "<div class='badge badge-status left badge-info' style='font-size: 100%;'>公告" ;
                 }else if (obj.type==='UPDATE') {
-                    code += "<div class='badge badge-status left badge-warning'>更新";
+                    code += "<div class='badge badge-status left badge-warning' style='font-size: 100%;'>更新";
                 }
                 code += "</div>" ;
                 code += "<div class='date'>" + obj.date + "</div>" ;
-                code += "<div class='content'>" ;
+                code += "<div class='content' style='width:88%'>" ;
                 code += "<a href='#!/news/details/" + obj.id + "'>" + obj.title + "</a>"
                 if (obj.news){
                     code += "<span class='badge badge-status badge-danger' style='margin-left: 10px'>NEW!</span>" ;

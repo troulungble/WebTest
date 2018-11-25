@@ -345,13 +345,13 @@
 			return;
 		}
 
-		if ( scroll > cl_navOuterHeight ) {
-			cl_nav.addClass('outOfSight');
-		}
+		// if ( scroll > cl_navOuterHeight ) {
+		// 	cl_nav.addClass('outOfSight');
+		// }
 
-		if ( $(window).scrollTop() > (cl_navOuterHeight + 65) ) {//if href = #element id
-			cl_nav.addClass('fixed scrolled');
-		}
+		// if ( $(window).scrollTop() > (cl_navOuterHeight + 65) ) {//if href = #element id
+		// 	cl_nav.addClass('fixed scrolled');
+		// }
 
 		if ( $(window).scrollTop() == 0 ) {
 			cl_nav.removeClass('fixed scrolled outOfSight');

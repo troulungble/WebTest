@@ -1393,7 +1393,8 @@ nav {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #0e1015;
+    /*color: #0e1015;*/
+    color: white;
     opacity: 0.5;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
@@ -1529,6 +1530,8 @@ nav.fixed {
 nav.fixed.scrolled {
     visibility: visible;
     opacity: 1;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .dropdown-menu {
