@@ -10,6 +10,10 @@
     border-radius: 0.25rem;
 }
 
+.mobile-toggle > .fa {
+    color : white;
+}
+
 .nav-bar{
     padding-right: 15px!important;
     padding-left: 15px !important;
