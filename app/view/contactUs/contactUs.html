@@ -1,39 +1,14 @@
 <div class="main-container" ng-controller="ContactUsController">
     <div class="container backgroundImage">
         <div class="row">
-            <div class="page-header" ng-show="!contactUsBanner">
+            <div class="page-header">
                 聯絡我們
             </div>
-            <img class="banner" src="{{contactUsBanner}}" ng-show="contactUsBanner"/>
             <div clas="col-md-12">
-                <div class="well main-well col-md-8" style="right:5px;">
+                <div class="well main-well col-md-12">
                     <div class="well sub-well">
                         <div class="content">
-                            <p class="float-right" style="margin:10px;">
-                                <img class="image-w300" ng-src="{{contactUsDescription.image}}">
-                            </p>
-                            <p ng-repeat="desc in contactUsDescription.text">
-                                {{desc}}
-                            </p>
-                            <div id="map" style="height: 400px;width: 100%"></div>
-                            <script>
-                                function initMapContactUs() {
-                                    var uluru = $('[ng-controller="ContactUsController"]').scope().uluru;
-                                    var map = new google.maps.Map(
-                                        document.getElementById('map'), {zoom: 18, center: uluru});
-                                    var marker = new google.maps.Marker({position: uluru, map: map});
-                                }
-                            </script>
-                            <script
-                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1MEGdAjOR1VH85BA5GX4Sq7P1afoAZJg&callback=initMapContactUs">
-                            </script>
                         </div>
-                    </div>
-                </div>
-
-                <div class="well facebook-well col-md-4" style="left: 5px;">
-                    <div class="well sub-well"  style="">
-                        <div class="fb-page" data-href="https://www.facebook.com/%E9%A6%99%E6%B8%AF%E9%A2%A8%E7%81%AB%E5%A0%82%E5%9C%8B%E8%A1%93%E6%8B%B9%E6%9C%83-719559088143277/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/%E9%A6%99%E6%B8%AF%E9%A2%A8%E7%81%AB%E5%A0%82%E5%9C%8B%E8%A1%93%E6%8B%B9%E6%9C%83-719559088143277/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/%E9%A6%99%E6%B8%AF%E9%A2%A8%E7%81%AB%E5%A0%82%E5%9C%8B%E8%A1%93%E6%8B%B9%E6%9C%83-719559088143277/">香港風火堂國術拹會</a></blockquote></div>
                     </div>
                 </div>
             </div>

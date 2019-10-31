@@ -6,24 +6,24 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Cache-Control" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <meta name="KeyWords" content="舞獅,舞龍,國術,龍獅,風火堂,羅山,羅山派,海陸豐,拳術,功夫">
-    <meta name="Description" content="香港風火堂國術協會官方網站">
+    <meta name="KeyWords" content="">
+    <meta name="Description" content="Web Test">
     <meta name="robots" content="noimageindex">
 
-    <link rel=stylesheet type="text/css" href="css/bootstrap/bootstrap.css?updated=2018111604">
-    <link rel=stylesheet type="text/css" href="css/flexslider/flexslider.css?updated=2018111604">
-    <link rel=stylesheet type="text/css" href="css/font-awesome/font-awesome.css?updated=2018111604">
-    <link rel=stylesheet type="text/css" href="css/shapely/style.css?updated=2018111604">
-    <link rel=stylesheet type="text/css" href="css/shapely/owl-carousel/owl.carousel.css?updated=2018111604">
-    <link rel=stylesheet type="text/css" href="css/shapely/owl-carousel/owl.theme.default.css?updated=2018111604">
-    <link rel=stylesheet type="text/css" href="css/shapely/customize-controls.css?updated=2018111604">
+    <link rel=stylesheet type="text/css" href="css/bootstrap/bootstrap.css?updated=20191031">
+    <link rel=stylesheet type="text/css" href="css/flexslider/flexslider.css?updated=20191031">
+    <link rel=stylesheet type="text/css" href="css/font-awesome/font-awesome.css?updated=20191031">
+    <link rel=stylesheet type="text/css" href="css/shapely/style.css?updated=20191031">
+    <link rel=stylesheet type="text/css" href="css/shapely/owl-carousel/owl.carousel.css?updated=20191031">
+    <link rel=stylesheet type="text/css" href="css/shapely/owl-carousel/owl.theme.default.css?updated=20191031">
+    <link rel=stylesheet type="text/css" href="css/shapely/customize-controls.css?updated=20191031">
 
-    <link rel="stylesheet" href="js/libs/angular-super-gallery/dist/angular-super-gallery.css?updated=2018111604">
+    <link rel="stylesheet" href="js/libs/angular-super-gallery/dist/angular-super-gallery.css?updated=20191031">
 
     <!--custom-->
-    <link rel=stylesheet type="text/css" href="css/app.css?updated=2018111604">
-    <title>香港風火堂國術協會</title>
-    <link rel="Shortcut Icon" type="image/x-icon" href="images/favicon.ico?updated=2018111604" />
+    <link rel=stylesheet type="text/css" href="css/app.css?updated=20191031">
+    <title>Web Test</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="images/favicon.ico?updated=20191031" />
 </head>
 <body class="home page-template page-template-page-templates page-template-template-home page-template-page-templatestemplate-home-php page page-id-1863 woocommerce-js has-sidebar-right">
 <div id="page" class="site">
@@ -47,27 +47,7 @@
                                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                                     <ul id="menu" class="menu">
                                         <li class="menu-item">
-                                            <a title="首頁" href="#!/home">首頁</a></li>
-                                        <li class="menu-item menu-item-has-children dropdown">
-                                            <a title="關於我們" >關於我們</a>
-                                            <span class="dropdown-toggle shapely-dropdown" data-toggle="dropdown"></span>
-                                            <ul role="menu" class="dropdown-menu">
-                                                <li class="menu-item">
-                                                    <a title="本會宗旨" href="#!/aboutUs/purpose">本會宗旨</a>
-                                                </li>
-                                                <li class="menu-item">
-                                                    <a title="武術源流" href="#!/aboutUs/origin">武術源流</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="menu-item">
-                                            <a title="最新消息" href="#!/news/list">最新消息</a></li>
-                                        <li class="menu-item">
-                                            <a title="活動花絮" href="#!/events/list">活動花絮</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a title="客戶專區" href="#!/clients">客戶專區</a>
+                                            <a title="首頁" href="#!/home">首頁</a>
                                         </li>
                                         <li class="menu-item">
                                             <a title="聯絡我們" href="#!/contactUs">聯絡我們</a>
@@ -83,16 +63,22 @@
     </header>
 </div>
 
-<div ui-view class="" style="min-height: 0px;">
-
+<div class="page-loading main-container" ng-controller="HomeController">
+    <div class="container backgroundImage text-center" style="padding-top: 20px;">
+        <img src="images/loading.gif"></img>
+    </div>
 </div>
+
+<div ui-view class="" style="min-height: 0px;">
+</div>
+
 </body>
 <footer class="container">
     <div class="float-left">
         | <a title="免責條款" href="#!/disclaimer">免責條款</a> | <a title="版權聲明" href="#!/copyright">版權聲明</a> |
     </div>
     <div class="float-right" style="color:#ffffff">
-        ©香港風火堂國術協會版權所有。
+        ©XXX版權所有。
     </div>
 </footer>
 
@@ -109,27 +95,22 @@
 <script src="js/libs/angular/angular.min.js"></script>
 <script src="js/libs/angular-route/angular-route.js"></script>
 <script src="js/libs/angular-ui-router/angular-ui-router.js"></script>
+<script src="js/libs/angular-ui-router/stateEvents.js"></script>
 <script src="js/libs/angular-animate/angular-animate.js"></script>
 <script src="js/libs/angular-touch/angular-touch.js"></script>
 <script src="js/libs/screenfull/dist/screenfull.js"></script>
 
-<script src="js/app.js?updated=2018111604"></script>
-<script src="js/state.js?updated=2018111604"></script>
-<script src="js/controller/HomeController.js?updated=2018111604"></script>
-<script src="js/controller/NewsController.js?updated=2018111604"></script>
-<script src="js/controller/NewsDetailsController.js?updated=2018111604"></script>
-<script src="js/controller/EventsController.js?updated=2018111604"></script>
-<script src="js/controller/EventsDetailsController.js?updated=2018111604"></script>
-<script src="js/controller/ClientsController.js?updated=2018111604"></script>
-<script src="js/controller/ContactUsController.js?updated=2018111604"></script>
+<script src="js/app.js?updated=20191031"></script>
+<script src="js/state.js?updated=20191031"></script>
+<script src="js/controller/HomeController.js?updated=20191031"></script>
+<script src="js/controller/ContactUsController.js?updated=20191031"></script>
 
-<script src="js/service/BackendService.js?updated=2018111604"></script>
+<script src="js/service/BackendService.js?updated=20191031"></script>
 
 <script src="js/libs/bootstrap/bootstrap.js"></script>
 <script src="js/libs/angular-easyfb/angular-easyfb.js"></script>
 <script src="js/libs/bootpag/jquery.bootpag.min.js"></script>
 <script src="js/libs/angular-super-gallery/dist/angular-super-gallery.js"></script>
-<!--<script src="js/libs/angular-youtube/iframe_api.js"></script>-->
 <script src="js/libs/angular-youtube/ng-youtube-embed.min.js"></script>
 
 </html>
