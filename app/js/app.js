@@ -42,10 +42,8 @@ app.run(function($rootScope){
         .$on('$stateChangeSuccess',
             function(event, toState, toParams, fromState, fromParams){
                 if ($rootScope.loading){
-                    setTimeout(function() {
-                        $(".page-loading").addClass("hidden");
-                        $rootScope.loading = false ;
-                    }, 1500);
-                }loading.gif
+                    $(".page-loading").addClass("hidden");
+                    $rootScope.loading = false ;
+                }
             });
 });
