@@ -15,8 +15,8 @@
 }
 
 .nav-bar{
-    padding-right: 15px!important;
-    padding-left: 15px !important;
+    padding-right: 0px!important;
+    padding-left: 0px !important;
 }
 
 .nav-container{
@@ -26,7 +26,7 @@
 
 .backgroundImage{
     background-color: white;
-    min-height: 1200px;
+    /*min-height: 1200px;*/
 }
 
 .badge:empty {
@@ -191,10 +191,11 @@
 body{
     font-family: "微軟正黑體 Light" ;
     background-color: white;
+    margin: 0px !important;
 }
 
 .menu-item-has-children{
-    color:#c0c0c0 ;
+    color:black ;
 }
 
 .menu-navigation{
@@ -212,6 +213,9 @@ body{
     display: inline-block;
     height: 100px;
     width: 1000px;
+    font-size: 46px;
+    color: DodgerBlue;
+    font-family: "微軟正黑體 Light";
 }
 
 .main-container{
@@ -220,22 +224,22 @@ body{
 
 footer{
     border-top: 0.5px solid rgba(0, 0, 0, 0.7);
-    background-color: lightblue;
+    background-color: #D2E9FF;
     padding: 30px !important;
     font-size: 18px;
 }
 
 .page-header{
-    color : DodgerBlue  ;
+    color : cornflowerblue;
     font-size: 24px;
     font-weight: 600;
     padding-bottom: 9px;
-    margin: 40px 0 20px;
+    margin: 20px 0 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1)
 }
 
 .header{
-    color : DodgerBlue  ;
+    color : cornflowerblue  ;
     font-size: 18px;
     font-weight: 600;
     margin: 0px 0 5px !important;
@@ -287,7 +291,7 @@ footer{
 
 .menu > li > ul li a:hover, .dropdown-menu > .active > a:hover {
     /*background: #c7c4a5;*/
-    background: #ababab;
+    background: #efefef;
 }
 
 .banner{
@@ -332,4 +336,72 @@ footer{
     -webkit-line-clamp: 1;
     overflow: hidden;
     line-height: initial;
+}
+
+.right-corner-menu *{
+    color:#222222;
+}
+
+.right-corner-menu a{
+    color:#222222
+}
+
+.right-corner-menu ul a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.right-corner-menu ul a:hover, .right-corner-menu ul a:hover *{
+    color:dodgerblue;
+}
+
+input[type=text], input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus, input[type=password]:focus, seform-controllect:focus {
+    border: 1px solid #2e6da4;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.nav-container, .main-navigation>.container, footer{
+    margin:0 !important;
+    width: 100% !important;
+}
+
+.site-title:hover{
+    color:dodgerblue!important;
+}
+
+footer a:hover{
+    color:dodgerblue!important;
+}
+
+a{
+    color:dodgerblue;
+}
+
+a:hover{
+    color:dodgerblue!important;
+    text-decoration: underline!important;
 }

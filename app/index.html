@@ -1,15 +1,14 @@
-<html lang="zh-TW" ng-app="myApp">
+<html lang="en-US" ng-app="myApp">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <meta name="KeyWords" content="">
     <meta name="Description" content="Web Test">
-    <meta name="robots" content="noimageindex">
-
+    <meta name="robots" content="">
     <link rel=stylesheet type="text/css" href="css/bootstrap/bootstrap.css?updated=20191031">
     <link rel=stylesheet type="text/css" href="css/flexslider/flexslider.css?updated=20191031">
     <link rel=stylesheet type="text/css" href="css/font-awesome/font-awesome.css?updated=20191031">
@@ -17,40 +16,62 @@
     <link rel=stylesheet type="text/css" href="css/shapely/owl-carousel/owl.carousel.css?updated=20191031">
     <link rel=stylesheet type="text/css" href="css/shapely/owl-carousel/owl.theme.default.css?updated=20191031">
     <link rel=stylesheet type="text/css" href="css/shapely/customize-controls.css?updated=20191031">
-
     <link rel="stylesheet" href="js/libs/angular-super-gallery/dist/angular-super-gallery.css?updated=20191031">
-
     <!--custom-->
     <link rel=stylesheet type="text/css" href="css/app.css?updated=20191031">
     <title>Web Test</title>
     <link rel="Shortcut Icon" type="image/x-icon" href="images/favicon.ico?updated=20191031" />
 </head>
-<body class="home page-template page-template-page-templates page-template-template-home page-template-page-templatestemplate-home-php page page-id-1863 woocommerce-js has-sidebar-right">
-<div id="page" class="site">
-    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
-    <header id="masthead" class="site-header" role="banner">
-        <div class="nav-container container">
-            <nav id="site-navigation" class="main-navigation menu-navigation" role="navigation">
-                <div class="container nav-bar">
-                    <div class="flex-row">
-                        <div class="module left site-title-container">
-                            <a href="#!/home" class="custom-logo-link">
-                                    <span class="site-title">
-                                    </span>
-                            </a>
+<body>
+<div class="nav-container container">
+    <nav id="site-navigation" class="main-navigation menu-navigation" role="navigation">
+        <div class="container nav-bar">
+            <div class="flex-row">
+                <div class="module col-sm-12" style="margin-bottom: 10px">
+                    <div class="float-left col-sm-10">
+                        <a href="#!/home">
+                            <span class="site-title">
+                            </span>
+                        </a>
+                    </div>
+                    <div class="float-right right col-sm-2">
+                        <div class="right-corner-menu collapse navbar-collapse navbar-ex1-collapse">
+                            <ul class="menu">
+                                <a title="Login" href="#!/login">
+                                    <i class="fa fa-sign-in"></i>
+                                    Login
+                                </a>
+                                <a title="Shopping cert" href="#!/shoppCert">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    Cert
+                                </a>
+                            </ul>
                         </div>
-                        <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
-                            <i class="fa fa-bars"></i>
-                        </div>
-                        <div class="module-group right">
+                    </div>
+                </div>
+                <div class="module-group col-sm-12" style=" background-color: #D2E9FF;">
+                    <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <div class="float-left">
+                        <div class="module-group float-left" style="height:auto">
                             <div class="module left">
                                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                                     <ul id="menu" class="menu">
                                         <li class="menu-item">
-                                            <a title="首頁" href="#!/home">首頁</a>
+                                            <a title="Home" href="#!/home">Home</a>
                                         </li>
-                                        <li class="menu-item">
-                                            <a title="聯絡我們" href="#!/contactUs">聯絡我們</a>
+                                        <li class="menu-item menu-item-has-children dropdown">
+                                            <a title="Product">Product</a>
+                                            <span class="dropdown-toggle shapely-dropdown" data-toggle="dropdown"></span>
+                                            <ul role="menu" class="dropdown-menu">
+                                                <li class="menu-item">
+                                                    <a title="CPU" href="#!/product/cpu">CPU</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a title="Motherboard"href ="#!/product/motherBoard">Motherboard</a>
+                                                </li>
+                                            </ul>
                                         </li>
                                     </ul>
                                 </div>
@@ -58,9 +79,9 @@
                         </div>
                     </div>
                 </div>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
 </div>
 
 <div class="page-loading main-container" ng-controller="HomeController">
@@ -73,12 +94,13 @@
 </div>
 
 </body>
+
 <footer class="container">
     <div class="float-left">
-        | <a title="免責條款" href="#!/disclaimer">免責條款</a> | <a title="版權聲明" href="#!/copyright">版權聲明</a> |
+        | <a title="Disclaimer" href="#!/disclaimer">Disclaimer</a> | <a title="Copy Right" href="#!/copyright">Copy Right</a> | <a title="Contact Us" href="#!/contactUs">Contact Us</a> |
     </div>
-    <div class="float-right" style="color:#ffffff">
-        ©XXX版權所有。
+    <div class="float-right" style="color:#000000">
+        ©ABC Computer Limited Company. All rights reserved.
     </div>
 </footer>
 
