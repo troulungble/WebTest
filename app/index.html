@@ -1,6 +1,5 @@
 <html lang="en-US" ng-app="myApp">
-
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -9,130 +8,135 @@
     <meta name="KeyWords" content="">
     <meta name="Description" content="Web Test">
     <meta name="robots" content="">
-    <link rel=stylesheet type="text/css" href="css/bootstrap/bootstrap.css?updated=20191031">
-    <link rel=stylesheet type="text/css" href="css/flexslider/flexslider.css?updated=20191031">
-    <link rel=stylesheet type="text/css" href="css/font-awesome/font-awesome.css?updated=20191031">
-    <link rel=stylesheet type="text/css" href="css/shapely/style.css?updated=20191031">
-    <link rel=stylesheet type="text/css" href="css/shapely/owl-carousel/owl.carousel.css?updated=20191031">
-    <link rel=stylesheet type="text/css" href="css/shapely/owl-carousel/owl.theme.default.css?updated=20191031">
-    <link rel=stylesheet type="text/css" href="css/shapely/customize-controls.css?updated=20191031">
-    <link rel="stylesheet" href="js/libs/angular-super-gallery/dist/angular-super-gallery.css?updated=20191031">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css?updated=20191031">
+    <link rel="stylesheet" type="text/css" href="css/shapely/style.css?updated=20191031">
+
     <!--custom-->
-    <link rel=stylesheet type="text/css" href="css/app.css?updated=20191031">
+    <link rel="stylesheet" type="text/css" href="css/app.css?updated=20191031">
+
+    <link rel="stylesheet" type="text/css" href="css/flexslider/flexslider.css?updated=20191031">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome/font-awesome.css?updated=20191031">
+
+    <link rel="stylesheet" type="text/css" href="css/shapely/owl-carousel/owl.carousel.css?updated=20191031">
+    <link rel="stylesheet" type="text/css" href="css/shapely/owl-carousel/owl.theme.default.css?updated=20191031">
+    <link rel="stylesheet" type="text/css" href="css/shapely/customize-controls.css?updated=20191031">
+    <link rel="stylesheet" type="text/css" href="js/libs/angular-super-gallery/dist/angular-super-gallery.css?updated=20191031">
+    <link rel="stylesheet" type="text/css" href="css/spinkit/angular-spinkit.min.css?updated=20191031">
+    <!--custom-->
+    <link rel="stylesheet" type="text/css" href="css/app.css?updated=20191031">
     <title>Web Test</title>
     <link rel="Shortcut Icon" type="image/x-icon" href="images/favicon.ico?updated=20191031" />
 </head>
-<body>
-<div class="nav-container container">
-    <nav id="site-navigation" class="main-navigation menu-navigation" role="navigation">
-        <div class="container nav-bar">
-            <div class="flex-row">
-                <div class="module col-sm-12" style="margin-bottom: 10px">
-                    <div class="float-left col-sm-10">
-                        <a href="#!/home">
-                            <span class="site-title">
-                            </span>
-                        </a>
-                    </div>
-                    <div class="float-right right col-sm-2">
-                        <div class="right-corner-menu collapse navbar-collapse navbar-ex1-collapse">
-                            <ul class="menu">
-                                <a title="Login" href="#!/login">
-                                    <i class="fa fa-sign-in"></i>
-                                    Login
+    <body>
+        <div class="nav-container container">
+            <nav id="site-navigation" class="main-navigation menu-navigation" role="navigation">
+                <div class="container nav-bar">
+                    <div class="flex-row">
+                        <div class="module col-sm-12" style="margin-bottom: 10px">
+                            <div class="float-left col-sm-10">
+                                <a href="#!/home">
+                                    <span class="site-title">
+                                    </span>
                                 </a>
-                                <a title="Shopping cert" href="#!/shoppCert">
-                                    <i class="fa fa-shopping-cart"></i>
-                                    Cert
-                                </a>
-                            </ul>
+                            </div>
+                            <div class="float-right right col-sm-2">
+                                <div class="right-corner-menu collapse navbar-collapse navbar-ex1-collapse">
+                                    <ul class="menu">
+                                        <a title="Login" href="#!/login">
+                                            <i class="fa fa-sign-in"></i>
+                                            Login
+                                        </a>
+                                        <a title="Shopping cert" href="#!/shoppCert">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            Cert
+                                        </a>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="module-group col-sm-12" style=" background-color: #D2E9FF;">
-                    <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
-                        <i class="fa fa-bars"></i>
-                    </div>
-                    <div class="float-left">
-                        <div class="module-group float-left" style="height:auto">
-                            <div class="module left">
-                                <div class="collapse navbar-collapse navbar-ex1-collapse">
-                                    <ul id="menu" class="menu">
-                                        <li class="menu-item">
-                                            <a title="Home" href="#!/home">Home</a>
-                                        </li>
-                                        <li class="menu-item menu-item-has-children dropdown">
-                                            <a title="Product">Product</a>
-                                            <span class="dropdown-toggle shapely-dropdown" data-toggle="dropdown"></span>
-                                            <ul role="menu" class="dropdown-menu">
+                        <div class="module-group col-sm-12" style=" background-color: #D2E9FF;">
+                            <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
+                                <i class="fa fa-bars"></i>
+                            </div>
+                            <div class="float-left">
+                                <div class="module-group float-left" style="height:auto">
+                                    <div class="module left">
+                                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                                            <ul id="menu" class="menu">
                                                 <li class="menu-item">
-                                                    <a title="CPU" href="#!/product/cpu">CPU</a>
+                                                    <a title="Home" href="#!/home">Home</a>
                                                 </li>
-                                                <li class="menu-item">
-                                                    <a title="Motherboard"href ="#!/product/motherBoard">Motherboard</a>
+                                                <li class="menu-item menu-item-has-children dropdown">
+                                                    <a title="Product">Product</a>
+                                                    <span class="dropdown-toggle shapely-dropdown" data-toggle="dropdown"></span>
+                                                    <ul role="menu" class="dropdown-menu">
+                                                        <li class="menu-item">
+                                                            <a title="CPU" href="#!/product/cpu">CPU</a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a title="Motherboard"href ="#!/product/motherBoard">Motherboard</a>
+                                                        </li>
+                                                    </ul>
                                                 </li>
                                             </ul>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </nav>
         </div>
-    </nav>
-</div>
 
-<div class="page-loading main-container" ng-controller="HomeController">
-    <div class="container backgroundImage text-center" style="padding-top: 20px;">
-        <img src="images/loading.gif"></img>
-    </div>
-</div>
+        <div ui-view class="" style="min-height: 0px;">
+        </div>
 
-<div ui-view class="" style="min-height: 0px;">
-</div>
+        <footer class="container">
+            <div class="float-left">
+                | <a title="Disclaimer" href="#!/disclaimer">Disclaimer</a> | <a title="Copy Right" href="#!/copyright">Copy Right</a> | <a title="Contact Us" href="#!/contactUs">Contact Us</a> |
+            </div>
+            <div class="float-right" style="color:#000000">
+                ©ABC Computer Limited Company. All rights reserved.
+            </div>
+        </footer>
 
-</body>
+        <div class="loading-div" ng-show="loading">
+            <three-bounce-spinner></three-bounce-spinner>
+        </div>
 
-<footer class="container">
-    <div class="float-left">
-        | <a title="Disclaimer" href="#!/disclaimer">Disclaimer</a> | <a title="Copy Right" href="#!/copyright">Copy Right</a> | <a title="Contact Us" href="#!/contactUs">Contact Us</a> |
-    </div>
-    <div class="float-right" style="color:#000000">
-        ©ABC Computer Limited Company. All rights reserved.
-    </div>
-</footer>
+    </body>
 
-<script src="js/libs/jquery/jquery-3.3.1.js"></script>
-<script src="js/libs/shapely/dev/flexslider.js"></script>
-<script src="js/libs/shapely/dev/parallax.js"></script>
-<script src="js/libs/shapely/dev/smooth-scroll.js"></script>
-<script src="js/libs/shapely/owl-carousel/owl.carousel.js"></script>
-<script src="js/libs/shapely/navigation.js"></script>
-<script src="js/libs/shapely/parallax.min.js"></script>
-<script src="js/libs/shapely/shapely-scripts.js"></script>
-<script src="js/libs/shapely/skip-link-focus-fix.js"></script>
+    <script src="js/libs/jquery/jquery-3.3.1.js"></script>
+    <script src="js/libs/shapely/dev/flexslider.js"></script>
+    <script src="js/libs/shapely/dev/parallax.js"></script>
+    <script src="js/libs/shapely/dev/smooth-scroll.js"></script>
+    <script src="js/libs/shapely/owl-carousel/owl.carousel.js"></script>
+    <script src="js/libs/shapely/navigation.js"></script>
+    <script src="js/libs/shapely/parallax.min.js"></script>
+    <script src="js/libs/shapely/shapely-scripts.js"></script>
+    <script src="js/libs/shapely/skip-link-focus-fix.js"></script>
 
-<script src="js/libs/angular/angular.min.js"></script>
-<script src="js/libs/angular-route/angular-route.js"></script>
-<script src="js/libs/angular-ui-router/angular-ui-router.js"></script>
-<script src="js/libs/angular-ui-router/stateEvents.js"></script>
-<script src="js/libs/angular-animate/angular-animate.js"></script>
-<script src="js/libs/angular-touch/angular-touch.js"></script>
-<script src="js/libs/screenfull/dist/screenfull.js"></script>
+    <script src="js/libs/angular/angular.min.js"></script>
+    <script src="js/libs/angular-route/angular-route.js"></script>
+    <script src="js/libs/angular-ui-router/angular-ui-router.js"></script>
+    <script src="js/libs/angular-ui-router/stateEvents.js"></script>
+    <script src="js/libs/angular-animate/angular-animate.js"></script>
+    <script src="js/libs/angular-touch/angular-touch.js"></script>
+    <script src="js/libs/screenfull/dist/screenfull.js"></script>
+    <script src="js/libs/angular-spinkit/angular-spinkit.js"></script>
 
-<script src="js/app.js?updated=20191031"></script>
-<script src="js/state.js?updated=20191031"></script>
-<script src="js/controller/HomeController.js?updated=20191031"></script>
-<script src="js/controller/ContactUsController.js?updated=20191031"></script>
+    <script src="js/app.js?updated=20191031"></script>
+    <script src="js/state.js?updated=20191031"></script>
+    <script src="js/controller/HomeController.js?updated=20191031"></script>
+    <script src="js/controller/ContactUsController.js?updated=20191031"></script>
 
-<script src="js/service/BackendService.js?updated=20191031"></script>
+    <script src="js/service/BackendService.js?updated=20191031"></script>
 
-<script src="js/libs/bootstrap/bootstrap.js"></script>
-<script src="js/libs/angular-easyfb/angular-easyfb.js"></script>
-<script src="js/libs/bootpag/jquery.bootpag.min.js"></script>
-<script src="js/libs/angular-super-gallery/dist/angular-super-gallery.js"></script>
-<script src="js/libs/angular-youtube/ng-youtube-embed.min.js"></script>
+    <script src="js/libs/bootstrap/bootstrap.js"></script>
+    <script src="js/libs/angular-easyfb/angular-easyfb.js"></script>
+    <script src="js/libs/bootpag/jquery.bootpag.min.js"></script>
+    <script src="js/libs/angular-super-gallery/dist/angular-super-gallery.js"></script>
+    <script src="js/libs/angular-youtube/ng-youtube-embed.min.js"></script>
 
 </html>

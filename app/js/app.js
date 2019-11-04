@@ -5,7 +5,8 @@ var app = angular.module('myApp',[
     'ui.router.state.events',
     'ngAnimate',
     'ngTouch',
-    'angularSuperGallery'
+    'angularSuperGallery',
+    'angular-spinkit'
 ]);
 
 app.constant('constantVariable', {
@@ -32,8 +33,7 @@ app.run(function($rootScope){
     $rootScope.$on('$stateChangeStart',
         function(event, toState, toParams, fromState, fromParams){
             if ($rootScope.loading) {
-                $("#ui-view").html("");
-                $(".page-loading").removeClass("hidden");
+                $rootScope.loading = true ;
             }
         }
     );
@@ -42,7 +42,6 @@ app.run(function($rootScope){
         .$on('$stateChangeSuccess',
             function(event, toState, toParams, fromState, fromParams){
                 if ($rootScope.loading){
-                    $(".page-loading").addClass("hidden");
                     $rootScope.loading = false ;
                 }
             });
