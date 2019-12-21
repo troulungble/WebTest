@@ -6,7 +6,8 @@ var app = angular.module('myApp',[
     'ngAnimate',
     'ngTouch',
     'angularSuperGallery',
-    'angular-spinkit'
+    'angular-spinkit',
+    'bw.paging'
 ]);
 
 app.constant('constantVariable', {
