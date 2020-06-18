@@ -67,9 +67,9 @@ angular-touch@1.7.4:
   version "1.7.4"
   resolved "https://registry.yarnpkg.com/angular-touch/-/angular-touch-1.7.4.tgz#ae12289f13a4a16c3a910e3b4e3db38c61d9c1f9"
 
-angular@1.7.4:
-  version "1.7.4"
-  resolved "https://registry.yarnpkg.com/angular/-/angular-1.7.4.tgz#c1bf4884c2d470c06907737a1bf0835a9f646f31"
+angular@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/angular/-/angular-1.8.0.tgz#b1ec179887869215cab6dfd0df2e42caa65b1b51"
 
 ansi-align@^2.0.0:
   version "2.0.0"
