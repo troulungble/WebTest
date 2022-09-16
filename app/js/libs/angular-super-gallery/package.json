@@ -35,7 +35,7 @@
     "angular": "1.7.4",
     "angular-animate": "1.7.4",
     "angular-touch": "1.7.4",
-    "bootstrap": "3.3.7",
+    "bootstrap": "3.4.1",
     "jquery": "3.3.1",
     "screenfull": "3.3.3"
   },
